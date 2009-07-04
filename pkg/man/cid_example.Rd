@@ -1,8 +1,8 @@
 \name{NIDALSGMEGR_spec}
 \alias{NIDALSGMEGR_spec}
 \docType{data}
-\title{Example Fragmentation Spectra}
-\description{Examples for \code{\link{specSimilarity}}.}
+\title{Example Peptide Fragmentation Spectrum}
+\description{Example for \code{\link{pepSpec}}.}
 \usage{
 NIDALSGMEGR_spec
 }
