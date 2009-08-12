@@ -53,7 +53,7 @@ d50 <- isoDistN("NECFLQHK", incorp = 0.5)
 d50$t <- "incorp = 50\%"
 d75 <- isoDistN("NECFLQHK", incorp = 0.75)
 d75$t <- "incorp = 75\%"
-d99 <- isoDistN("NECFLQHK", incorp = 1)
+d99 <- isoDistN("NECFLQHK", incorp = 0.99)
 d99$t <- "incorp = 99\%"
 x <- rbind(dn, d25, d50, d75, d99)
 library(lattice)

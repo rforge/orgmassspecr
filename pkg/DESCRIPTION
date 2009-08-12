@@ -1,8 +1,8 @@
 Package: OrgMassSpecR
 Type: Package
 Title: OrgMassSpecR: Organic Mass Spectrometry
-Version: 0.1-4
-Date: 2009-07-04
+Version: 0.1-5
+Date: 2009-08-11
 Author: Nathan G. Dodder and Katharine M. Mullen, National Institute of Standards and Technology (NIST), Gaithersburg, Maryland, USA.
 Maintainer: Nathan Dodder <nathan.dodder@nist.gov>
 Description: OrgMassSpecR is a package for organic/biological mass spectrometry, with a focus on the graphical display of mass spectra and related data, small molecule and protein quantification using stable isotope dilution, and protein hydrogen/deuterium exchange experiments.

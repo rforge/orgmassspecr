@@ -27,7 +27,7 @@ The relative atomic masses of the isotopes are from the NIST Physical Reference 
 }
 \value{The monoisotopic mass of the unchaged molecule or the monoisotopic m/z value of the charged molecule.}
 \author{Nathan G. Dodder and Katharine M. Mullen}
-\seealso{\code{\link{enzDigest}}, \code{\link{pepFrag}}}
+\seealso{\code{\link{enzDigest}}, \code{\link{pepFrag}}, \code{\link{molecWt}}}
 \examples{
 ## monoisotopic m/z of creatinine (C4H7N3O), +1 charge
 ## unlabeled
@@ -41,7 +41,7 @@ monoisoMass(formula = list(C=2, H=7, N=3, O=1, x=2),
             isotopes = list(x = 13.0033548378),
             charge = 1)
 
-## monoisotopic mass of cyanocobalamin (C63H87CoN14O14P)
-monoisoMass(formula = list(C=63, H=87, N=14, O=14, P=1, x=1),
+## monoisotopic mass of cyanocobalamin (C63H88CoN14O14P)
+monoisoMass(formula = list(C=63, H=88, N=14, O=14, P=1, x=1),
             isotopes = list(x = 58.9332002))
 }
