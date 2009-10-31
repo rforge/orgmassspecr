@@ -1,10 +1,10 @@
-\name{drawChrom}
-\alias{drawChrom}
+\name{DrawChromatogram}
+\alias{DrawChromatogram}
 \title{Plot a Chromatogram}
 \description{Plot a chromatogram, color the area under specified peak(s), and calculate the peak area(s).}
 \usage{
-drawChrom(time, intensity, range = list(start, stop), color = "blue", 
-          title = "chromatogram", units = "min")
+DrawChromatogram(time, intensity, range = list(start, stop), color = "blue", 
+                 title = "", units = "min")
 }
 \arguments{
     \item{time}{numeric vector containing the time points (the x-axis).}
@@ -24,18 +24,21 @@ A data frame with the following column names.
 \author{Nathan G. Dodder}
 \examples{
 ## single peak
-x <- drawChrom(chrom_example_1$time, chrom_example_1$intensity, 
-               range = list(start = 25.4, stop = 26.1), 
-               title = "example chromatogram")
+x <- DrawChromatogram(chromatogramExample1$time, chromatogramExample1$intensity, 
+                      range = list(start = 25.4, stop = 26.1), 
+                      title = "example chromatogram 1")
 # label peak with retention time and area
-text(x$retention.time, x$apex.intensity + 1500, 
-     labels = paste("RT = ", round(x$retention.time, digits = 1),
-                    ", Area = ", round(x$area), sep = ""), cex = 0.9) 
+text(x$retentionTime, x$apexIntensity + 1500, 
+     labels = paste("RT = ", round(x$retentionTime, digits = 1),
+                    ", Area = ", round(x$peakArea), sep = ""), cex = 0.9) 
 
 ## multiple peaks 
-#y <- drawChrom(chrom_example_2$time, chrom_example_2$intensity, 
-#               range = list(start = 25.4, stop = 26.1), 
-#               title = "example chromatogram")
-## label peaks using returned dataframe
-#text(y$retention.time, y$apex.intensity, labels = c("a","b","c"......))
+y <- DrawChromatogram(chromatogramExample2$time, chromatogramExample2$intensity, 
+                      range = list(start = c(21.5, 21.925, 23.1, 25.5, 27.35), 
+                                    stop = c(21.925, 22.4, 23.6, 26.2, 28.0)),
+                      color = c("blue", "red", "green", "yellow", "orange"), 
+                      title = "example chromatogram 2")
+## label peaks
+text(y$retentionTime, y$apexIntensity + 50000, labels = c("a", "b", "c", "d", "e"))
 }
+
