@@ -15,19 +15,31 @@
 <img src="logo.png" alt="R-Forge Logo">
 </h1>
 <h2>OrgMassSpecR</h2>
-<p>OrgMassSpecR (Organic Mass Spectrometry with <a href="http://www.r-project.org/">R</a>) is a package for organic/biological mass spectrometry, with a focus on the graphical display of mass spectra and related data, small molecule and protein quantification using stable isotope dilution, and protein hydrogen/deuterium exchange experiments.</p>
-<p>This project is currently in the alpha stage of development.</p>
+<p>OrgMassSpecR (Organic Mass Spectrometry with <a href="http://www.r-project.org/">R</a>) contains functions to assist with instrument operation and data analsis.</p>
+<p>This project is in the alpha stage of development.</p>
 <p>The current version is on the <a href="http://r-forge.r-project.org/">R-Forge</a> OrgMassSpecR project <strong><a href="http://r-forge.r-project.org/projects/orgmassspecr/">summary/download page</a></strong>.</p>
 
-<h3>Examples</h3>
-<p><strong>Graphics: </strong>Make head-to-tail plots of mass spectra.  Plot chromatograms and color the peaks.</p>
-<p><strong>Peptide Analysis: </strong>Predict the peptides resulting from an enzymatic cleavage of a protein by trypsin or pepsin.  Calculate the b/y or c/z fragment ion <em>m/z</em> values of an unlabeled or stable isotope labeled peptide.  Plot annotoated peptide fragmentation mass spectra produced by collision induced dissociation (CID) or electron transfer dissociation (ETD).</p>
-<p><strong>Isotopic Distributions: </strong>Simulate the isotopic distribution of labeled or unlabeled organic molecules, of peptides from nitrogen-15 labeled proteins, and peptides undergoing hydrogen/deuterium exchange.</p>
+<h3>Current Functions</h3>
+<p><strong>ConvertPeptide</strong>: Convert single amino acid codes to an elemental formula or three letter codes.</p>
+<p><strong>DeadVolume</strong>: Calculate the internal volume of a defined length of tubing.</p>
+<p><strong>Digest</strong>: Cleave an amino acid sequence (a protein or peptide) according to enzyme specific rules and calculate the precursor ion m/z values.</p>
+<p><strong>DrawChromatogram</strong>: Plot a chromatogram, color the area under specified peak(s), and calculate the peak area(s).</p>
+<p><strong>ExchangeableAmides</strong>: Determine the number of backbone amide hydrogens given a protein/peptide sequence.  Used in hydrogen-deuterium exchange experiments.</p>
+<p><strong>FlowTime</strong>: Calculate the time required for a liquid to flow through a defined length of tubing.</p>
+<p><strong>FragmentPeptide</strong>: Determine the b- and y-ions or c- and z-ions produced by the fragmentation of a peptide by tandem mass spectrometry.</p>
+<p><strong>IsotopicDistributionHDX</strong>: Simulate the isotopic distribution of a peptide undergoing hydrogen-deuterium exchange.</p>
+<p><strong>IsotopicDistributionN</strong>: Simulate the isotopic distribution of a nitrogen-15 labeled peptide.</p>
+<p><strong>MolecularWeight</strong>: Calculate the molecular weight of an organic molecule.</p>
+<p><strong>MonoisotopicMass</strong>: Calculate the monoisotopic mass or monoisotopic m/z value of an organic molecule.</p>
+<p><strong>PeptideSpectrum</strong>: Plot a peptide fragmentation mass spectrum, with the b- and y-ions or c- and z-ions identified.</p>
+<p><strong>SpectrumSimilarity</strong>: Generate a head-to-tail plot of the two mass spectra and calculate a similarity score.</p>
+
+<h3>Example Graphics</h3>
 <img src="similarity.png" width="500" alt="head-to-tail plot">
-<img src="chromatogram.png" width="450" alt="chromatogram">
+<img src="chromatogram2.png" width="720" alt="chromatogram">
 <img src="pepspec.png" width="750" alt="fragmentation mass spectrum">
 <img src="isodist.png" width="550" alt="simulated isotopic distribution">
 
-<h5><em>Page created on 2009-05-07.  Last updated on 2009-06-14.</em></h5>
+<h5><em>Page created on 2009-05-07.  Last updated on 2009-10-31.</em></h5>
 </body>
 </html>
