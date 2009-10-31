@@ -1,8 +1,8 @@
-\name{monoisoMass}
-\alias{monoisoMass}
+\name{MonoisotopicMass}
+\alias{MonoisotopicMass}
 \title{Calculate the monoisotopic mass or monoisotopic m/z value of an organic molecule.}
 \description{Given an elemental formula, the relative atomic masses of the isotopes, and the charge state, determine the monoisotopic mass or monoisotopic m/z value.}
-\usage{monoisoMass(formula = list(), isotopes = list(), charge = 0)}
+\usage{MonoisotopicMass(formula = list(), isotopes = list(), charge = 0)}
 \arguments{  
     \item{formula}{a list describing the uncharged elemental formula.  The allowed elements are C, H, N, O, S, P, and a user defined "x".  See Examples.}
     \item{isotopes}{a list specifing the relative atomic masses of the isotopes.}
@@ -27,21 +27,21 @@ The relative atomic masses of the isotopes are from the NIST Physical Reference 
 }
 \value{The monoisotopic mass of the unchaged molecule or the monoisotopic m/z value of the charged molecule.}
 \author{Nathan G. Dodder and Katharine M. Mullen}
-\seealso{\code{\link{enzDigest}}, \code{\link{pepFrag}}, \code{\link{molecWt}}}
+\seealso{\code{\link{Digest}}, \code{\link{FragmentPeptide}}, \code{\link{MolecularWeight}}}
 \examples{
 ## monoisotopic m/z of creatinine (C4H7N3O), +1 charge
 ## unlabeled
-monoisoMass(formula = list(C=4, H=7, N=3, O=1), charge = 1)
+MonoisotopicMass(formula = list(C=4, H=7, N=3, O=1), charge = 1)
 ## with all carbon-13 atoms
-monoisoMass(formula = list(C=4, H=7, N=3, O=1), 
-            isotopes = list(C = 13.0033548378),
-            charge = 1) 
+MonoisotopicMass(formula = list(C=4, H=7, N=3, O=1), 
+                 isotopes = list(C = 13.0033548378),
+                 charge = 1) 
 ## with 2 carbon-12 atoms and 2 carbon-13 atoms
-monoisoMass(formula = list(C=2, H=7, N=3, O=1, x=2), 
-            isotopes = list(x = 13.0033548378),
-            charge = 1)
+MonoisotopicMass(formula = list(C=2, H=7, N=3, O=1, x=2), 
+                 isotopes = list(x = 13.0033548378),
+                 charge = 1)
 
 ## monoisotopic mass of cyanocobalamin (C63H88CoN14O14P)
-monoisoMass(formula = list(C=63, H=88, N=14, O=14, P=1, x=1),
-            isotopes = list(x = 58.9332002))
+MonoisotopicMass(formula = list(C=63, H=88, N=14, O=14, P=1, x=1),
+                 isotopes = list(x = 58.9332002))
 }

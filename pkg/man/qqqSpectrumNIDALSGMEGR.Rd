@@ -1,10 +1,10 @@
-\name{NIDALSGMEGR_spec}
-\alias{NIDALSGMEGR_spec}
+\name{qqqSpectrumNIDALSGMEGR}
+\alias{qqqSpectrumNIDALSGMEGR}
 \docType{data}
 \title{Example Peptide Fragmentation Spectrum}
-\description{Example for \code{\link{pepSpec}}.}
+\description{Example for \code{\link{PeptideSpectrum}}.}
 \usage{
-NIDALSGMEGR_spec
+qqqSpectrumNIDALSGMEGR
 }
 \format{A data frame consisting of (centroid) \emph{m/z} values in the first column and peak intensities in the second.}
 \source{Peptide sequence NIDALSGMEGR.  Acquired on a hybrid triple quadruploe/linear ion trap mass spectrometer in collision induced dissociation (CID) mode.}

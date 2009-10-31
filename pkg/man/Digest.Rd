@@ -1,11 +1,11 @@
-\name{enzDigest}
-\alias{enzDigest}
+\name{Digest}
+\alias{Digest}
 \title{Predict Peptides Resulting from Enzymatic Digest}
 \description{Cleave an amino acid sequence (a protein or peptide) according to enzyme specific rules and calculate the precursor ion \emph{m/z} values.
 }
 \usage{
-enzDigest(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE, 
-          N15 = FALSE, custom = list())
+Digest(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE, 
+       N15 = FALSE, custom = list())
 }
 \arguments{
     \item{sequence}{a character string representing the amino acid sequence to be cleaved by the enzyme.}
@@ -52,17 +52,17 @@ The error message \dQuote{\code{object "mass" not found}} indicates the input se
     \item{mz3}{monoisotopic \emph{m/z} values for the \eqn{[M + 3H]^{3+}}{[M + 3H]3+} ions}
 }  
 \author{Nathan G. Dodder}
-\seealso{\code{\link{monoisoMass}}, \code{\link{pepFrag}}}
+\seealso{\code{\link{MonoisotopicMass}}, \code{\link{FragmentPeptide}}}
 \examples{
 ## digest human serum albumin with 0 and 1 missed cleavages
-enzDigest(hsa, missed = 1)
+Digest(hsaSequence, missed = 1)
 
 ## digest human serum albumin with a phosphoserine at position 58
 ## and all methionines oxidized
-mhsa <- strsplit(hsa, split = "")[[1]]
-mhsa[58] <- "s"   # insert code for phosphoserine  
-mhsa <- paste(mhsa, collapse = "")
-enzDigest(mhsa, custom = list(code = c("s","M"), 
-    mass = c(monoisoMass(list(C=3, H=6, N=1, O=5, P=1)),
-             monoisoMass(list(C=5, H=9, N=1, O=2, S=1)))))
+modifiedHsaSequence <- strsplit(hsaSequence, split = "")[[1]]
+modifiedHsaSequence[58] <- "s"   # insert code for phosphoserine  
+modifiedHsaSequence <- paste(modifiedHsaSequence, collapse = "")
+Digest(modifiedHsaSequence, custom = list(code = c("s","M"), 
+       mass = c(MonoisotopicMass(list(C=3, H=6, N=1, O=5, P=1)),
+                MonoisotopicMass(list(C=5, H=9, N=1, O=2, S=1)))))
 }

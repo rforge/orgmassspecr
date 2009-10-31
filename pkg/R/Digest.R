@@ -1,5 +1,5 @@
-enzDigest <- function(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE, 
-                      N15 = FALSE, custom = list()) {
+Digest <- function(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE, 
+                   N15 = FALSE, custom = list()) {
 
 
     ## determine cleavage sites according to enzyme specific rules

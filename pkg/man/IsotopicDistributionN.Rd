@@ -1,11 +1,11 @@
-\name{isoDistN}
-\alias{isoDistN}
+\name{IsotopicDistributionN}
+\alias{IsotopicDistributionN}
 \title{Isotopic Distribution of a Nitrogen-15 Labeled Peptide.}
 \description{Simulates the isotopic distribution of a nitrogen-15 labeled peptide.  Intended for peptides from proteins grown in media with, for example, nitrogen-15 labeled ammonium chloride as the only nitrogen source.  
 }
 \usage{
-isoDistN(sequence, incorp, IAA = TRUE, charge = 1, 
-         custom = list(code = NULL, elements = NULL))
+IsotopicDistributionN(sequence, incorp, IAA = TRUE, charge = 1, 
+                      custom = list(code = NULL, elements = NULL))
 }
 \arguments{
     \item{sequence}{character vector specifying the amino acid sequence.}
@@ -15,13 +15,13 @@ isoDistN(sequence, incorp, IAA = TRUE, charge = 1,
     \item{custom}{a list specifying user defined residues as \code{custom = list(code, mass)}, where \code{code} is a vector of one letter characters and \code{mass} is a vector of the respective monoisotopic masses.}
 }
 \details{
-The amino acid residues must be specified by the one letter codes defined in the help for \code{\link{enzDigest}}.  If a custom residue code is identical to a predefined residue code, the custom residue mass will be used in place of the predefined mass.
+The amino acid residues must be specified by the one letter codes defined in the help for \code{\link{Digest}}.  If a custom residue code is identical to a predefined residue code, the custom residue mass will be used in place of the predefined mass.
 
 The natural nitrogen-15 incorporation is 0.00368. 
 
 The argument \code{IAA} specifies treatment of the protein with iodoacetamide.  This treatment produces iodoacetylated cysteine residues (elemental formula C5H8N2O2S).  The nitrogen(s) added is not labeled.
 
-The algorithm used in this function is based on \code{\link{sample}}, and will give a slightly different result each time it is run.  It is similar to algorithm used in reference 1.  \code{isoDistN} has not been tested for sequences over approximately 3000 amu and charges greater that 3+.
+The algorithm used in this function is based on \code{\link{sample}}, and will give a slightly different result each time it is run.  It is similar to algorithm used in reference 1.  \code{IsotopicDistributionN} has not been tested for sequences over approximately 3000 amu and charges greater that 3+.
 }
 \references{
 1. "Method for Estimating the Isotopic Distributions of Metabolically Labeled Proteins by MALDI-TOFMS: Application to NMR Samples." Choudhary K, Spicer VL, Donald LJ, Duckworth HW, Ens W, Loewen PC, Standing KG, \emph{Analytical Chemistry}, 2006, 78, 5419-5423.
@@ -42,18 +42,18 @@ A data frame with the following column names.
     \item{percent}{the intensity at each \emph{m/z} value, expressed as a percent of the maximum intensity.}
 }
 \author{Nathan G. Dodder}
-\seealso{\code{\link{isoDistHDX}}, \code{\link{sample}}}
+\seealso{\code{\link{IsotopicDistributionHDX}}, \code{\link{sample}}}
 \examples{
 ## simulate a peptide with 0.368 to 100 percent incorporation and plot
-dn <- isoDistN("NECFLQHK", incorp = 0.00368)
+dn <- IsotopicDistributionN("NECFLQHK", incorp = 0.00368)
 dn$t <- "incorp = 0.368\%"
-d25 <- isoDistN("NECFLQHK", incorp = 0.25)
+d25 <- IsotopicDistributionN("NECFLQHK", incorp = 0.25)
 d25$t <- "incorp = 25\%"
-d50 <- isoDistN("NECFLQHK", incorp = 0.5)
+d50 <- IsotopicDistributionN("NECFLQHK", incorp = 0.5)
 d50$t <- "incorp = 50\%"
-d75 <- isoDistN("NECFLQHK", incorp = 0.75)
+d75 <- IsotopicDistributionN("NECFLQHK", incorp = 0.75)
 d75$t <- "incorp = 75\%"
-d99 <- isoDistN("NECFLQHK", incorp = 0.99)
+d99 <- IsotopicDistributionN("NECFLQHK", incorp = 0.99)
 d99$t <- "incorp = 99\%"
 x <- rbind(dn, d25, d50, d75, d99)
 library(lattice)

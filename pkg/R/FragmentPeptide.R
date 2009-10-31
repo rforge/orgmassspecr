@@ -1,4 +1,4 @@
-pepFrag <- function(sequence, fragments = "by", IAA = TRUE, N15 = FALSE, custom = list()) {
+FragmentPeptide <- function(sequence, fragments = "by", IAA = TRUE, N15 = FALSE, custom = list()) {
 
     results_list <- vector("list")
     for(sequence_number in 1:length(sequence)) {

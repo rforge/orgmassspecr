@@ -1,9 +1,9 @@
-\name{exchAmides}
-\alias{exchAmides}
+\name{ExchangeableAmides}
+\alias{ExchangeableAmides}
 \title{Determine the Number of Backbone Amide Hydrogens}
 \description{Determine the number of backbone amide hydrogens given a protein/peptide sequence.  Used in hydrogen-deuterium exchange experiments.
 }
-\usage{exchAmides(sequence)}
+\usage{ExchangeableAmides(sequence)}
 \arguments{
     \item{sequence}{character vector containing one or more amino acid sequences.}
 }
@@ -12,12 +12,12 @@ The number of backbone amide hydrogens in an amino acid sequence is the number o
 }
 \value{A numeric vector containing the number of exchangeable hydrogens.}
 \author{Nathan G. Dodder}
-\seealso{\code{\link{isoDistHDX}}}
+\seealso{\code{\link{IsotopicDistributionHDX}}}
 \examples{
-exchAmides(c("VDVMCTA", "VSTPTL"))
+ExchangeableAmides(c("VDVMCTA", "VSTPTL"))
 
 ## find the number of exchangeable amides for 
 ## each peptide in a digest of human serum albumin
-x <- enzDigest(hsa, enzyme = "pepsin", IAA = FALSE, missed = 4)
-transform(x, exchange = exchAmides(x$peptide))
+x <- Digest(hsaSequence, enzyme = "pepsin", IAA = FALSE, missed = 4)
+transform(x, exchange = ExchangeableAmides(x$peptide))
 }

@@ -1,4 +1,4 @@
-pepSpec <- function(expt, theory, t = 0.4, b = 5, label = "", xlim = c(100, 1500), supress = FALSE) {
+PeptideSpectrum <- function(expt, theory, t = 0.4, b = 5, label = "", xlim = c(100, 1500), supress = FALSE) {
 
     # !!! Is there a way to check theory came from pepFrag? 
 

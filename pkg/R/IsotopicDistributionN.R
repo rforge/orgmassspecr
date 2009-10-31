@@ -1,5 +1,5 @@
-isoDistN <- function(sequence, incorp, IAA = TRUE, charge = 1, 
-                     custom = list(code = NULL, elements = NULL)) {
+IsotopicDistributionN <- function(sequence, incorp, IAA = TRUE, charge = 1, 
+                                  custom = list(code = NULL, elements = NULL)) {
 
     if(length(custom$elements != 0)) {
         custom_elements <- c(C = 0, H = 0, N = 0, O = 0, S = 0, P = 0)

@@ -1,5 +1,5 @@
-isoDistHDX <- function(sequence, incorp, charge = 1, 
-                       custom = list(code = NULL, elements = NULL)) {
+IsotopicDistributionHDX <- function(sequence, incorp, charge = 1, 
+                                    custom = list(code = NULL, elements = NULL)) {
 
     if(length(custom$elements != 0)) {
         custom_elements <- c(C = 0, H = 0, N = 0, O = 0, S = 0, P = 0)
@@ -40,7 +40,7 @@ isoDistHDX <- function(sequence, incorp, charge = 1,
     ## add N-terminal H and C-terminal OH
     elements <- x + c(C = 0, H = 2, N = 0, O = 1, S = 0, P = 0) 
 
-    num_exch_sites <- exchAmides(sequence)
+    num_exch_sites <- ExchangeableAmides(sequence)
 
     simulation <- function(elements) {
 						

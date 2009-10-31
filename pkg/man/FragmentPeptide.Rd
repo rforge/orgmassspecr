@@ -1,11 +1,11 @@
-\name{pepFrag}
-\alias{pepFrag}
+\name{FragmentPeptide}
+\alias{FragmentPeptide}
 \title{Predict Peptide Fragment Ions}
 \description{Determine the b- and y-ions or c- and z-ions produced by the fragmentation of a peptide by tandem mass spectrometry.
 }
 \usage{
-pepFrag(sequence, fragments = "by", IAA = TRUE, 
-        N15 = FALSE, custom = list())
+FragmentPeptide(sequence, fragments = "by", IAA = TRUE, 
+                N15 = FALSE, custom = list())
 }
 \arguments{
     \item{sequence}{a vector of character strings representing the amino acid sequences to be fragmented by the mass spectrometer.}
@@ -16,7 +16,7 @@ pepFrag(sequence, fragments = "by", IAA = TRUE,
 
 }
 \details{
-The amino acid residues must be specified by the one letter codes defined in the help for \code{\link{enzDigest}}. 
+The amino acid residues must be specified by the one letter codes defined in the help for \code{\link{Digest}}. 
 
 The fragmentation rules can be set for collision induced dissociation (b- and y-ions) or electron transfer dissociation (c- and z-ions). 
 
@@ -41,17 +41,17 @@ A data frame with the following column names.  The data frame is arranged this w
     \item{ms2mz}{monoisotopic \emph{m/z} values for the product ions.}
 }
 \author{Nathan G. Dodder and Katharine M. Mullen}
-\seealso{\code{\link{monoisoMass}}, \code{\link{enzDigest}},  \code{\link{pepSpec}}}
+\seealso{\code{\link{MonoisotopicMass}}, \code{\link{Digest}},  \code{\link{PeptideSpectrum}}}
 \examples{
 ## fragment unlabeled peptide
-pepFrag("NECFLQHK")
+FragmentPeptide("NECFLQHK")
 ## fragment peptide with carbon-13 labeled lysine
-km <- monoisoMass(formula = list(C = 6, H = 12, N = 2, O = 1),
-                  isotopes = list(C = 13.0033548378)) 
-pepFrag("NECFLQHk", custom = list(code = "k", mass = km))
+km <- MonoisotopicMass(formula = list(C = 6, H = 12, N = 2, O = 1),
+                       isotopes = list(C = 13.0033548378)) 
+FragmentPeptide("NECFLQHk", custom = list(code = "k", mass = km))
 
-## fragment a vector of peptides produced by enzDigest
-x <- enzDigest(hsa)
+## fragment a vector of peptides produced by Digest
+x <- Digest(hsaSequence)
 y <- subset(x, nchar(x$peptide) > 5 & nchar(x$peptide) < 12)
-pepFrag(y$peptide)
+FragmentPeptide(y$peptide)
 }

@@ -1,4 +1,4 @@
-exchAmides <- function(sequence) {
+ExchangeableAmides <- function(sequence) {
     n <- length(sequence)
     x <- vector(mode = "numeric", length = n)
     for(i in 1:n) {

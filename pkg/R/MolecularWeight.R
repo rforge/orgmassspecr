@@ -1,4 +1,4 @@
-molecWt <- function(formula = list(), amu = list()) {
+MolecularWeight <- function(formula = list(), amu = list()) {
     
     tmp_formula <- list(C = 0, H = 0, N = 0, O = 0, S = 0, P = 0, x = 0)
     tmp_formula[names(formula)] <- formula   # replace default values with argument values

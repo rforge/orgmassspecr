@@ -1,10 +1,10 @@
-convertPep <- function(sequence, output = "elements", IAA = TRUE) {
+ConvertPeptide <- function(sequence, output = "elements", IAA = TRUE) {
 
-	peptide_vector <- strsplit(sequence, split = "")[[1]]
+	peptideVector <- strsplit(sequence, split = "")[[1]]
 
 	if(output == "elements") {
 	
-		findElement <- function(residue) {
+		FindElement <- function(residue) {
 		
 			if(residue == "A") element <- c(C = 3, H = 5, N = 1, O = 1, S = 0)
 			if(residue == "R") element <- c(C = 6, H = 12, N = 4, O = 1, S = 0)
@@ -33,15 +33,15 @@ convertPep <- function(sequence, output = "elements", IAA = TRUE) {
 			
 		}
 		
-		results_vector <- c(C = 0, H = 0, N = 0, O = 0, S = 0)
-		for(i in 1:length(peptide_vector)) { results_vector <- findElement(peptide_vector[i]) + results_vector }
+		resultsVector <- c(C = 0, H = 0, N = 0, O = 0, S = 0)
+		for(i in 1:length(peptideVector)) { resultsVector <- FindElement(peptideVector[i]) + resultsVector }
 		
-		return(as.list(results_vector))
+		return(as.list(resultsVector))
 	}
 
 	if(output == "3letter") {
 		
-		findCode <- function(residue) {
+		FindCode <- function(residue) {
 		
 			if(residue == "A") let <- "Ala"
 			if(residue == "R") let <- "Arg"
@@ -68,7 +68,7 @@ convertPep <- function(sequence, output = "elements", IAA = TRUE) {
 				
 		} 
 
-		codes <- sapply(peptide_vector, findCode)
+		codes <- sapply(peptideVector, FindCode)
 		return(paste(codes, collapse = ""))
 	
 	}

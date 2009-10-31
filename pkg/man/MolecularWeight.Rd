@@ -1,8 +1,8 @@
-\name{molecWt}
-\alias{molecWt}
+\name{MolecularWeight}
+\alias{MolecularWeight}
 \title{Calculate the molecular weight of an organic molecule.}
 \description{Given an elemental formula and the average relative atomic masses of the elements, determine the molecular weight.}
-\usage{molecWt(formula = list(), amu = list())}
+\usage{MolecularWeight(formula = list(), amu = list())}
 \arguments{  
     \item{formula}{a list describing the elemental formula.  The allowed elements are C, H, N, O, S, P, and a user defined "x".  See Examples.}
     \item{amu}{a list specifing user defined standard atomic masses of the elements (in atomic mass units).}
@@ -17,11 +17,11 @@ The relative atomic masses of the elements are from the NIST Physical Reference 
 }
 \value{The molecular weight of the molecule.}
 \author{Nathan G. Dodder}
-\seealso{\code{\link{monoisoMass}}}
+\seealso{\code{\link{MonoisotopicMass}}}
 \examples{
-molecWt(formula = list(C=2, H=4))
+MolecularWeight(formula = list(C=2, H=4))
 
 ## molecular weight of cyanocobalamin (C63H88CoN14O14P)
-molecWt(formula = list(C=63, H=88, N=14, O=14, P=1, x=1),
-            amu = list(x = 58.933200))
+MolecularWeight(formula = list(C=63, H=88, N=14, O=14, P=1, x=1),
+                amu = list(x = 58.933200))
 }

@@ -1,5 +1,5 @@
-specSimilarity <- function(spec.top, spec.bottom, t = 0.25, b = 10, top.label = NULL, 
-                           bottom.label = NULL, xlim = c(50, 1200)) {
+SpectrumSimilarity <- function(spec.top, spec.bottom, t = 0.25, b = 10, top.label = NULL, 
+                               bottom.label = NULL, xlim = c(50, 1200)) {
                            	
 
     ## format spectra and normalize intensitites
