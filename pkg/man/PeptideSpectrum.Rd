@@ -29,4 +29,5 @@ Generates an annotated spectrum and a data frame showing the matches between the
 t <- FragmentPeptide("NIDALSGMEGR")   # generate theoretical fragment ions
 dev.new(width = 10, height = 5.5)
 PeptideSpectrum(qqqSpectrumNIDALSGMEGR, t, label = "CID", xlim = c(100, 1200))
+mtext("Peptide fragmentation mass spectrum", line = 1)
 }  

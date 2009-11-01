@@ -34,6 +34,9 @@ SpectrumSimilarity(alanineUnknownSpectrum, alanineAuthenticSpectrum,
                    xlim = c(25, 350))
 ## label peaks
 plot.window(xlim = c(25,350), ylim = c(-125, 125))
-text(c(73, 147, 158, 232, 260), c(100, 23, 44, 22, 15) + 10, c(73, 147, 158, 232, 260), cex = 0.75)
-text(c(73, 147, 158, 232, 260), -c(100, 47, 74, 33, 20) - 10, c(73, 147, 158, 232, 260), cex = 0.75)
+text(c(73, 147, 158, 232, 260), c(100, 23, 44, 22, 15) + 10,
+     c(73, 147, 158, 232, 260), cex = 0.75)
+text(c(73, 147, 158, 232, 260), -c(100, 47, 74, 33, 20) - 10, 
+     c(73, 147, 158, 232, 260), cex = 0.75)
+mtext("Spectrum similarity", line = 1)
 }
