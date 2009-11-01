@@ -61,7 +61,8 @@ xyplot(percent ~ mz | t, data = x,
     type = "h", 
     xlab = "m/z", 
     ylab = "intensity (\%)",
-    main = "Isotopic distribution of peptide NECFLQHK with varying nitrogen-15 incorporation")
+    main = "Isotopic distribution of peptide NECFLQHK with 
+            varying nitrogen-15 incorporation")
 }
 
 
