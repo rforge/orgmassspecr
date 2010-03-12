@@ -2,11 +2,11 @@ Package: OrgMassSpecR
 Type: Package
 Title: OrgMassSpecR: Organic Mass Spectrometry
 Version: 0.1-6
-Date: 2009-10-30
-Author: Nathan G. Dodder and Katharine M. Mullen, National Institute of Standards and Technology (NIST), Gaithersburg, Maryland, USA.
-Maintainer: Nathan Dodder <nathan.dodder@nist.gov>
+Date: 2010-03-12
+Author: Nathan G. Dodder, Southern California Coastal Water Research Project (SCCWRP).  Contributions from Katharine M. Mullen.
+Maintainer: Nathan Dodder <nathand@sccwrp.org>
 Description: Functions related to instrument operation and data analysis.
-License: Unlimited
+License: BSD
 URL: http://orgmassspecr.r-forge.r-project.org/
 LazyLoad: yes
 LazyData: yes
