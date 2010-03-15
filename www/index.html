@@ -12,12 +12,23 @@
 
 <body>
 <h1>
-<img src="logo.png" alt="R-Forge Logo">
+<a href ="http://r-forge.r-project.org"> <img src="logo.png" border="0" alt="R-Forge Logo" /> </a>
 </h1>
 <h2>OrgMassSpecR</h2>
-<p>OrgMassSpecR, Organic Mass Spectrometry with <a href="http://www.r-project.org/">R</a>, contains functions to assist with instrument operation and data analysis.</p>
+<p>OrgMassSpecR, Organic Mass Spectrometry with <a href="http://www.r-project.org/">R</a>, is an extension for the R language and environment for statistical computing and graphics.  It contains functions to assist with instrument operation and data analysis.</p>
 <p>This project is in the alpha stage of development.</p>
 <p>The current version is on the <a href="http://r-forge.r-project.org/">R-Forge</a> OrgMassSpecR project <strong><a href="http://r-forge.r-project.org/projects/orgmassspecr/">summary/download page</a></strong>.</p>
+
+<h3>Getting Started</h3>
+<p>Download and install OrgMassSpecR using the following command, or <a href="http://r-forge.r-project.org/projects/orgmassspecr/">download the binary file</a> appropriate for your operating system and install using the R menu system (for example, on Windows go to Packages, then Install package(s) from local zip files...).  
+<pre>install.packages("OrgMassSpecR",repos="http://R-Forge.R-project.org")</pre>
+<p>Load OrgMassSpecR in your current session with the following command.</p>
+<pre>library(OrgMassSpecR)</pre>
+<p>Documentation and examples for each function are available.  For example</p>
+<pre>?FragmentPeptide</pre>
+<p>will show the documentation for the function FragmentPeptide.  Run the examples by copying and pasting the code in to the R consol.</p>
+<p>Information about the package and a list of included functions and data sets can be displayed with the following command.</p>
+<pre>help(package = "OrgMassSpecR")</pre>
 
 <h3>Current Functions</h3>
 <p><strong>ConvertPeptide</strong>: Convert single amino acid codes to an elemental formula or three letter codes.</p>
@@ -41,7 +52,7 @@
 <img src="peptideFragmentationPlot.png" width="700" alt="fragmentation mass spectrum">
 <img src="spectrumSimilarityPlot.png" width="700" alt="head-to-tail plot">
 
-<h5><em>Page created on 2009-05-07.  Last updated on 2009-11-01.</em></h5>
+<h5><em>Page created on 2009-05-07.  Last updated on 2010-03-14.</em></h5>
 <h5><em>Nathan Dodder</em></h5>
 </body>
 </html>
