@@ -1,12 +1,12 @@
 DrawChromatogram <- function(time, intensity, range = list(start, stop), color = "blue", 
-                             title = "", units = "min") { 
+  xlab = "retention time", ylab = "intensity", las = 1, ...) { 
 
   if(length(range$start) != length(range$stop)) stop("start and stop vectors in the range list must be equal")
   if(length(color) != 1 & length(color) != length(range$start))
     stop("color vector length must be 1 or equal to the vectors in the range list")
 
   plot(time, intensity, type = "l", ylim = c(0, max(intensity) + 0.1 * max(intensity)), 
-    xlab = paste("retention time ", "(", units, ")", sep = ""), ylab = "intensity", main = title)
+    xlab = xlab, ylab = ylab, las = las, ...)
 
   # calculate the retention time, area, and apex intensity of each peak 
   retentionTime <- vector(mode = "numeric", length = length(range$start))
@@ -37,3 +37,4 @@ DrawChromatogram <- function(time, intensity, range = list(start, stop), color =
   return(data.frame(retentionTime, peakArea, apexIntensity))
 
 }
+

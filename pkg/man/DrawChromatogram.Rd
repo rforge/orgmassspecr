@@ -4,15 +4,17 @@
 \description{Plot a chromatogram, color the area under specified peak(s), and calculate the peak area(s).}
 \usage{
 DrawChromatogram(time, intensity, range = list(start, stop), color = "blue", 
-                 title = "", units = "min")
+                 xlab = "retention time", ylab = "intensity", las = 1, ...)
 }
 \arguments{
     \item{time}{numeric vector containing the time points (the x-axis).}
     \item{intensity}{numeric vector containing the respective signal intensities at each time point (the y-axis).}
     \item{range}{list describing the start and stop time points for each peak, defined as \code{range = list(start, stop)}, where \code{start} is the numeric vector of starting time points and \code{stop} is the numeric vector of the respective ending time points.}
     \item{color}{vector of character strings specifying the color for each peak given in \code{range}.  If a single color is specified, it is applied to all peaks.}
-    \item{title}{character string specifying the title for the chromatogram.}
-    \item{units}{character string specifying the time units.}
+    \item{xlab}{character string specifying the x-axis label.}
+    \item{ylab}{character string specifying the y-axis label.}
+    \item{las}{numeric value specifying the rotation of the axis labels, see par for options.}
+    \item{...}{additional parameters to be passed to plot().}
 }
 \details{The area under the peak(s) is rendered using the \code{\link{polygon}} function.  The area calculation assumes that the polygon does not self-intersect.}
 \value{
@@ -33,12 +35,15 @@ text(x$retentionTime, x$apexIntensity + 1500,
                     ", Area = ", round(x$peakArea), sep = ""), cex = 0.9) 
 
 ## multiple peaks 
-y <- DrawChromatogram(chromatogramExample2$time, chromatogramExample2$intensity, 
+y <- DrawChromatogram(chromatogramExample2$time, 
+                      chromatogramExample2$intensity / 1000, 
                       range = list(start = c(21.5, 21.925, 23.1, 25.5, 27.35), 
-                                    stop = c(21.925, 22.4, 23.6, 26.2, 28.0)),
+                        stop = c(21.925, 22.4, 23.6, 26.2, 28.0)),
                       color = c("blue", "red", "green", "yellow", "orange"), 
-                      title = "example chromatogram 2")
+                      xlab = "retention time (min)", 
+                      ylab = "intensity x 1000 (cps)", 
+                      main = "Example Chromatogram")
 ## label peaks
-text(y$retentionTime, y$apexIntensity + 50000, labels = c("a", "b", "c", "d", "e"))
+text(y$retentionTime, y$apexIntensity + 50, labels = c("a", "b", "c", "d", "e"))
 }
 
