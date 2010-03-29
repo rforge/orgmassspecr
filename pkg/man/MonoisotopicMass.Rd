@@ -4,7 +4,7 @@
 \description{Given an elemental formula, the relative atomic masses of the isotopes, and the charge state, determine the monoisotopic mass or monoisotopic m/z value.}
 \usage{MonoisotopicMass(formula = list(), isotopes = list(), charge = 0)}
 \arguments{  
-    \item{formula}{a list describing the uncharged elemental formula.  The allowed elements are C, H, N, O, S, P, and a user defined "x".  See Examples.}
+    \item{formula}{a list describing the uncharged elemental formula.  The allowed elements are C, H, N, O, S, P, Br, Cl, F, Si, and a user defined "x".  See Examples.}
     \item{isotopes}{a list specifing the relative atomic masses of the isotopes.}
     \item{charge}{an integer specifying the number of positive or negative charges.  If a charge is specified, the m/z of the molecule is calculated by adding or subtracting the specified number of protons.  If \code{charge = 0}, the monoisotopic mass is returned.}
 }

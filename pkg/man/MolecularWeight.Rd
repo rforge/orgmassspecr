@@ -4,7 +4,7 @@
 \description{Given an elemental formula and the average relative atomic masses of the elements, determine the molecular weight.}
 \usage{MolecularWeight(formula = list(), amu = list())}
 \arguments{  
-    \item{formula}{a list describing the elemental formula.  The allowed elements are C, H, N, O, S, P, and a user defined "x".  See Examples.}
+    \item{formula}{a list describing the elemental formula.  The allowed elements are C, H, N, O, S, P, Br, Cl, F, Si, and a user defined "x".  See Examples.}
     \item{amu}{a list specifing user defined standard atomic masses of the elements (in atomic mass units).}
 }
 \details{
