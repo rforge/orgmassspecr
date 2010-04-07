@@ -30,7 +30,7 @@ A data frame with the following column names.
     \item{percent}{the intensity at each \emph{m/z} value, expressed as a percent of the maximum intensity.}
 }
 \author{Nathan G. Dodder}
-\seealso{\code{\link{IsotopicDistributionN}}, \code{\link{sample}}}
+\seealso{\code{\link{IsotopicDistribution}}, \code{\link{IsotopicDistributionN}}, \code{\link{sample}}}
 \examples{
 ## simulate a peptide with 0.0115 and 100 percent incorporation and plot
 x <- IsotopicDistributionHDX("NECFLQHK", incorp = 0.000115)
