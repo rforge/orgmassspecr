@@ -16,11 +16,11 @@
 </h1>
 <h2>OrgMassSpecR</h2>
 <p>OrgMassSpecR, Organic Mass Spectrometry with <a href="http://www.r-project.org/">R</a>, is an extension for the R language and environment for statistical computing and graphics.  It contains functions to assist with instrument operation and data analysis.</p>
-<p>This project is in the alpha stage of development.</p>
-<p>The current version is on the <a href="http://r-forge.r-project.org/">R-Forge</a> OrgMassSpecR project <strong><a href="http://r-forge.r-project.org/projects/orgmassspecr/">summary/download page</a></strong>.</p>
+<p>This project is under continuous development. Reference: Liao WL, Heo GY, Dodder NG, Pikuleva IA, Turko IV, Optimizing the Conditions of a Multiple Reaction Monitoring Assay for Membrane Proteins: Quantification of Cytochrome P450 11A1 and Adrenodoxin Reductase in Bovine Adrenal Cortex and Retina, Anal. Chem. 2010 Jun 3. [Epub ahead of print].</p>
+<p>The current version is on the <a href="http://r-forge.r-project.org/">R-Forge</a> OrgMassSpecR project <strong><a href="http://r-forge.r-project.org/projects/orgmassspecr/">summary page</a></strong>, under R Packages.</p>
 
 <h3>Getting Started</h3>
-<p>Download and install OrgMassSpecR using the following command, or <a href="http://r-forge.r-project.org/projects/orgmassspecr/">download the binary file</a> appropriate for your operating system and install using the R menu system (for example, on Windows go to Packages, then Install package(s) from local zip files...).  
+<p>Download and install OrgMassSpecR using the following command, or download the binary file appropriate for your operating system and install using the R menu system (for example, on Windows go to Packages, then Install package(s) from local zip files...).  
 <pre>install.packages("OrgMassSpecR",repos="http://R-Forge.R-project.org")</pre>
 <p>Load OrgMassSpecR in your current session with the following command.</p>
 <pre>library(OrgMassSpecR)</pre>
@@ -48,11 +48,15 @@
 <p></p>
 <p></p>
 <h3>Example Graphics</h3>
-<img src="isotopicDistributionPlot.png" width="700" alt="simulated isotopic distribution">
-<img src="chromatogramPlot.png" width="700" alt="chromatogram">
-<img src="peptideFragmentationPlot.png" width="700" alt="fragmentation mass spectrum">
-<img src="spectrumSimilarityPlot.png" width="550" alt="head-to-tail plot">
+<p>Simulated isotopic distributions of peptide NECFLQHK with varying nitrogen-15 incorporation; function IsotopicDistributionN.</p>
+<img src="dist.png" alt="simulated isotopic distribution">
+<p>Highlighted peaks; function DrawChromatogram.</p>
+<img src="chrom.png" alt="chromatogram">
+<p>Peptide fragmentation mass spectrum; function PeptideSpectrum.</p>
+<img src="spec.png" alt="fragmentation mass spectrum">
+<p>GC/MS spectrum similarity; function SpectrumSimilarity</p>
+<img src="similarity.png" alt="head-to-tail plot">
 
-<h5><em>Page created on 2009-05-07.  Last updated on 2010-04-07.</em></h5>
+<h5><em>Page created on 2009-05-07.  Last updated on 2010-06-26.</em></h5>
 </body>
 </html>
