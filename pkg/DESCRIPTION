@@ -1,8 +1,8 @@
 Package: OrgMassSpecR
 Type: Package
 Title: Organic Mass Spectrometry
-Version: 0.1-9
-Date: 2010-04-07
+Version: 0.2-0
+Date: 2010-07-28
 Author: Nathan G. Dodder, Southern California Coastal Water Research Project (SCCWRP).  Contributions from Katharine M. Mullen.
 Maintainer: Nathan Dodder <nathand@sccwrp.org>
 Description: Functions related to instrument operation and data analysis.
