@@ -4,7 +4,8 @@
 \description{Plot a chromatogram, color the area under specified peak(s), and calculate the peak area(s).}
 \usage{
 DrawChromatogram(time, intensity, range = list(start, stop), color = "blue", 
-                 xlab = "retention time", ylab = "intensity", las = 1, ...)
+                 xlab = "retention time", ylab = "intensity", 
+                 ylim = c(0, max(intensity) * 1.1), las = 1, ...)
 }
 \arguments{
     \item{time}{numeric vector containing the time points (the x-axis).}
@@ -13,6 +14,7 @@ DrawChromatogram(time, intensity, range = list(start, stop), color = "blue",
     \item{color}{vector of character strings specifying the color for each peak given in \code{range}.  If a single color is specified, it is applied to all peaks.}
     \item{xlab}{character string specifying the x-axis label.}
     \item{ylab}{character string specifying the y-axis label.}
+    \item{ylim}{numeric vector of length 2 specifying the range of the y axis.}
     \item{las}{numeric value specifying the rotation of the axis labels, see par for options.}
     \item{...}{additional parameters to be passed to plot().}
 }
@@ -26,9 +28,10 @@ A data frame with the following column names.
 \author{Nathan G. Dodder}
 \examples{
 ## single peak
-x <- DrawChromatogram(chromatogramExample1$time, chromatogramExample1$intensity, 
+x <- DrawChromatogram(chromatogramExample1$time, chromatogramExample1$intensity/100, 
                       range = list(start = 25.4, stop = 26.1), 
-                      title = "example chromatogram 1")
+                      main = "example chromatogram 1",
+                      ylab = "intensity x 100")
 # label peak with retention time and area
 text(x$retentionTime, x$apexIntensity + 1500, 
      labels = paste("RT = ", round(x$retentionTime, digits = 1),
