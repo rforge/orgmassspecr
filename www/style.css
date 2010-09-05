@@ -1,0 +1,23 @@
+/* stylesheet */
+
+/* 
+
+body { color: black; background: white; margin-left: 5%; margin-right: 5%; font-family: sans-serif;}
+
+h1,h2,h3,h4,h5,h6 { color: black; background: white; margin-left: -4%; font-family: sans-serif;}
+
+mainpage { color: black; background: white; margin-left: -4%; font-family: sans-serif;}
+
+em.footnote { color: gray; margin-left: -4%; font-family: sans-serif; }
+
+*/
+
+body { color: black; background: white; font-family: sans-serif; }
+
+h2 { color: black; }
+
+h1,h3,h4,h5,h6 { color: blue; }
+
+strong.fn { color: black; }
+
+em.footnote { color: gray; }

@@ -4,10 +4,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
 <title>OrgMassSpecR</title>
-<style type="text/css">
-  body { color: black; background: white; margin-left: 5%; margin-right: 5%; font-family: sans-serif;}
-  h1,h2,h3,h4,h5,h6 { color: black; background: white; margin-left: -4%; font-family: sans-serif;}
-</style>
+<link type="text/css" rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,47 +14,19 @@
 <h2>OrgMassSpecR</h2>
 <p>OrgMassSpecR, Organic Mass Spectrometry with <a href="http://www.r-project.org/">R</a>, is an extension for the R language and environment for statistical computing and graphics.  It contains functions to assist with instrument operation and data analysis.</p>
 <p>This project is under continuous development.</p>
-<p>Reference illustrating the use of functions IsotopicDistributionN, Digest, and FragmentPeptide: Liao WL, Heo GY, Dodder NG, Pikuleva IA, Turko IV, Optimizing the Conditions of a Multiple Reaction Monitoring Assay for Membrane Proteins: Quantification of Cytochrome P450 11A1 and Adrenodoxin Reductase in Bovine Adrenal Cortex and Retina, Anal. Chem., 2010, 82 (13), pp 5760–5767, DOI: 10.1021/ac100811x.</p>
+<p>Reference illustrating the use of functions IsotopicDistributionN, Digest, and FragmentPeptide: 
+Liao WL, Heo GY, Dodder NG, Pikuleva IA, Turko IV, "Optimizing the Conditions of a Multiple Reaction Monitoring Assay for Membrane Proteins: Quantification of Cytochrome P450 11A1 and Adrenodoxin Reductase in Bovine Adrenal Cortex and Retina", <em>Analytical Chemistry</em>, <b>2010</b>, 82, 5760-5767 (DOI: 10.1021/ac100811x).</p>
 <p>The current version is on the <a href="http://r-forge.r-project.org/">R-Forge</a> OrgMassSpecR project <strong><a href="http://r-forge.r-project.org/projects/orgmassspecr/">summary page</a></strong>, under R Packages.</p>
 
-<h3>Getting Started</h3>
-<p>Download and install OrgMassSpecR using the following command, or download the binary file appropriate for your operating system and install using the R menu system (for example, on Windows go to Packages, then Install package(s) from local zip files...).  
-<pre>install.packages("OrgMassSpecR",repos="http://R-Forge.R-project.org")</pre>
-<p>Load OrgMassSpecR in your current session with the following command.</p>
-<pre>library(OrgMassSpecR)</pre>
-<p>Documentation and examples for each function are available.  For example</p>
-<pre>?FragmentPeptide</pre>
-<p>will show the documentation for the function FragmentPeptide.  Run the examples by copying and pasting the code in to the R console.</p>
-<p>Information about the package and a list of included functions and data sets can be displayed with the following command.</p>
-<pre>help(package = "OrgMassSpecR")</pre>
+<!-- <p>The stable version is on <strong><a href="http://cran.r-project.org/web/packages/OrgMassSpecR/index.html">CRAN</a></strong>.  The development version is on the <a href="http://r-forge.r-project.org/">R-Forge</a> OrgMassSpecR project <strong><a href="http://r-forge.r-project.org/projects/orgmassspecr/">summary page</a></strong>, under R Packages.</p> -->
 
-<h3>Current Functions</h3>
-<p><strong>ConvertPeptide</strong>: Convert single amino acid codes to an elemental formula or three letter codes.</p>
-<p><strong>DeadVolume</strong>: Calculate the internal volume of a defined length of tubing.</p>
-<p><strong>Digest</strong>: Cleave an amino acid sequence (a protein or peptide) according to enzyme specific rules and calculate the precursor ion m/z values.</p>
-<p><strong>DrawChromatogram</strong>: Plot a chromatogram, color the area under specified peak(s), and calculate the peak area(s).</p>
-<p><strong>ExchangeableAmides</strong>: Determine the number of backbone amide hydrogens given a protein/peptide sequence.  Used in hydrogen-deuterium exchange experiments.</p>
-<p><strong>FlowTime</strong>: Calculate the time required for a liquid to flow through a defined length of tubing.</p>
-<p><strong>FragmentPeptide</strong>: Determine the b- and y-ions or c- and z-ions produced by the fragmentation of a peptide by tandem mass spectrometry.</p>
-<p><strong>IsotopicDistribution</strong>: Simulate the isotopic distribution of an organic molecule.</p>
-<p><strong>IsotopicDistributionHDX</strong>: Simulate the isotopic distribution of a peptide undergoing hydrogen-deuterium exchange.</p>
-<p><strong>IsotopicDistributionN</strong>: Simulate the isotopic distribution of a peptide with varying amounts of nitrogen-15 incorporation.</p>
-<p><strong>MolecularWeight</strong>: Calculate the molecular weight of an organic molecule.</p>
-<p><strong>MonoisotopicMass</strong>: Calculate the monoisotopic mass or monoisotopic m/z value of an organic molecule.</p>
-<p><strong>PeptideSpectrum</strong>: Plot a peptide fragmentation mass spectrum, with the b- and y-ions or c- and z-ions identified.</p>
-<p><strong>RetentionIndex</strong>: Calculate the the non-isothermal gas chromatographic retention index of a target compound.</p>
-<p><strong>SpectrumSimilarity</strong>: Generate a head-to-tail plot of two mass spectra and calculate a similarity score.</p>
+<p><a href = "functions.html">Functions</a></p>
+<!-- Example code is in the vignette included with the package or available through the <p><a href = "http://cran.r-project.org/web/packages/OrgMassSpecR/index.html">CRAN website</a></p> -->
+<p><a href = "graphics.html">Example graphics</a></p>
+<p><a href = "start.html">Getting started</a></p>
 
-<h3>Example Graphics</h3>
-<p>Simulated isotopic distributions of peptide NECFLQHK with varying nitrogen-15 incorporation; function IsotopicDistributionN.</p>
-<img src="dist.png" alt="simulated isotopic distribution">
-<p>Highlighted peaks; function DrawChromatogram.</p>
-<img src="chrom.png" alt="chromatogram">
-<p>Peptide fragmentation mass spectrum; function PeptideSpectrum.</p>
-<img src="spec.png" alt="fragmentation mass spectrum">
-<p>GC/MS spectrum similarity; function SpectrumSimilarity</p>
-<img src="similarity.png" alt="head-to-tail plot">
+<hr>
 
-<h5><em>Page created on 2009-05-07.  Last updated on 2010-07-01.</em></h5>
+<p><em class = "footnote">Nathan Dodder, Southern California Coastal Water Research Project.  <br>Page created on 2009-05-07.  Last updated on 2010-09-05.</em></p>
 </body>
 </html>
