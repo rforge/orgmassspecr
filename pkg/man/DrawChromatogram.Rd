@@ -28,7 +28,8 @@ A data frame with the following column names.
 \author{Nathan G. Dodder}
 \examples{
 ## single peak
-x <- DrawChromatogram(chromatogramExample1$time, chromatogramExample1$intensity/100, 
+x <- DrawChromatogram(example.chromatogram.single$time,  
+                      example.chromatogram.single$intensity/100, 
                       range = list(start = 25.4, stop = 26.1), 
                       main = "example chromatogram 1",
                       ylab = "intensity x 100")
@@ -38,8 +39,8 @@ text(x$retentionTime, x$apexIntensity + 1500,
                     ", Area = ", round(x$peakArea), sep = ""), cex = 0.9) 
 
 ## multiple peaks 
-y <- DrawChromatogram(chromatogramExample2$time, 
-                      chromatogramExample2$intensity / 1000, 
+y <- DrawChromatogram(example.chromatogram.multiple$time, 
+                      example.chromatogram.multiple$intensity / 1000, 
                       range = list(start = c(21.5, 21.925, 23.1, 25.5, 27.35), 
                         stop = c(21.925, 22.4, 23.6, 26.2, 28.0)),
                       color = c("blue", "red", "green", "yellow", "orange"), 

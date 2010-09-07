@@ -1,0 +1,16 @@
+export(ConvertPeptide, 
+       DeadVolume,
+       Digest,
+       DrawChromatogram,
+       ExchangeableAmides,
+       FlowTime,
+       FragmentPeptide,
+       IsotopicDistribution,
+       IsotopicDistributionHDX,
+       IsotopicDistributionN,
+       MolecularWeight,
+       MonoisotopicMass,
+       PeptideSpectrum,
+       RetentionIndex,
+       SpectrumSimilarity
+)

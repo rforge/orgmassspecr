@@ -47,19 +47,19 @@ The error message \dQuote{\code{object "mass" not found}} indicates the input se
     \item{start}{beginning residue positions in the the original sequence.}
     \item{end}{ending residue positions in the the original sequence.}
     \item{mc}{number of missed cleavages.}
-    \item{mz1}{monoisotopic \emph{m/z} values for the \eqn{[M + H]^{1+}}{[M + H]1+} ions (where M is the precursor mass)}.
-    \item{mz2}{monoisotopic \emph{m/z} values for the \eqn{[M + 2H]^{2+}}{[M + 2H]2+} ions}
-    \item{mz3}{monoisotopic \emph{m/z} values for the \eqn{[M + 3H]^{3+}}{[M + 3H]3+} ions}
+    \item{mz1}{monoisotopic \emph{m/z} values for the \eqn{[M + H]^{1+}}{[M + H]1+} ions (where M is the precursor mass).}
+    \item{mz2}{monoisotopic \emph{m/z} values for the \eqn{[M + 2H]^{2+}}{[M + 2H]2+} ions.}
+    \item{mz3}{monoisotopic \emph{m/z} values for the \eqn{[M + 3H]^{3+}}{[M + 3H]3+} ions.}
 }  
 \author{Nathan G. Dodder}
 \seealso{\code{\link{MonoisotopicMass}}, \code{\link{FragmentPeptide}}}
 \examples{
 ## digest human serum albumin with 0 and 1 missed cleavages
-Digest(hsaSequence, missed = 1)
+Digest(example.sequence, missed = 1)
 
 ## digest human serum albumin with a phosphoserine at position 58
 ## and all methionines oxidized
-modifiedHsaSequence <- strsplit(hsaSequence, split = "")[[1]]
+modifiedHsaSequence <- strsplit(example.sequence, split = "")[[1]]
 modifiedHsaSequence[58] <- "s"   # insert code for phosphoserine  
 modifiedHsaSequence <- paste(modifiedHsaSequence, collapse = "")
 Digest(modifiedHsaSequence, custom = list(code = c("s","M"), 

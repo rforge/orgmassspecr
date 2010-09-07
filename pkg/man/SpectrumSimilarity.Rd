@@ -28,7 +28,7 @@ Note that, although both are based on the cosine of the two intensity vectors, t
 \author{Nathan G. Dodder}
 \seealso{\code{\link{PeptideSpectrum}}}
 \examples{
-SpectrumSimilarity(alanineUnknownSpectrum, alanineAuthenticSpectrum,
+SpectrumSimilarity(example.spectrum.unknown, example.spectrum.authentic,
                    top.label = "unknown, electron impact", 
                    bottom.label = "derivatized alanine, electron impact",
                    xlim = c(25, 350))

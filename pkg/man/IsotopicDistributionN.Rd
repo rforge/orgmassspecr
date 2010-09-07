@@ -12,16 +12,16 @@ IsotopicDistributionN(sequence, incorp, IAA = TRUE, charge = 1,
     \item{incorp}{numeric value from 0 to 1, specifying the fraction of nitrogen-15.}
     \item{IAA}{logical. \code{TRUE} specifies iodoacetylated cysteine and \code{FALSE} specifies unmodified cystine.}
     \item{charge}{numeric value specifying the number of positive charges (\eqn{[M + nH]^{n+}}{[M + nH]n+})}
-    \item{custom}{a list specifying user defined residues as \code{custom = list(code, mass)}, where \code{code} is a vector of one letter characters and \code{mass} is a vector of the respective monoisotopic masses.}
+    \item{custom}{a list specifying a user defined residue as \code{custom = list(code, elements)}, where \code{code} is a one letter character vector representing the custom residue and \code{elements} is a vector of the number of elements in the character vector, with the indicies equal to C,H,N,O,S,or P.}
 }
 \details{
-The amino acid residues must be specified by the one letter codes defined in the help for \code{\link{Digest}}.  If a custom residue code is identical to a predefined residue code, the custom residue mass will be used in place of the predefined mass.
+The amino acid residues must be specified by the one letter codes defined in the help for \code{\link{Digest}}.  If a custom residue code is identical to a predefined residue code, the custom residue will NOT be used in place of the predefined residue; doing so will cause errors.
 
 The natural nitrogen-15 incorporation is 0.00368. 
 
 The argument \code{IAA} specifies treatment of the protein with iodoacetamide.  This treatment produces iodoacetylated cysteine residues (elemental formula C5H8N2O2S).  The nitrogen(s) added is not labeled.
 
-The algorithm used in this function is based on \code{\link{sample}}, and will give a slightly different result each time it is run.  It is similar to algorithm used in reference 1.  \code{IsotopicDistributionN} has not been tested for sequences over approximately 3000 amu and charges greater that 3+.
+The algorithm used in this function is based on \code{\link{sample}}, and will give a slightly different result each time it is run.  It is similar to the algorithm used in reference 1.  \code{IsotopicDistributionN} has not been tested for sequences over approximately 3000 amu and charges greater that 3+.
 }
 \references{
 1. "Method for Estimating the Isotopic Distributions of Metabolically Labeled Proteins by MALDI-TOFMS: Application to NMR Samples." Choudhary K, Spicer VL, Donald LJ, Duckworth HW, Ens W, Loewen PC, Standing KG, \emph{Analytical Chemistry}, 2006, 78, 5419-5423.
@@ -32,7 +32,7 @@ The algorithm used in this function is based on \code{\link{sample}}, and will g
 
 The relative atomic masses of the isotopes are from the NIST Physical Reference Data Website \url{http://physics.nist.gov/PhysRefData/Compositions/}.  The molar mass of a proton (H+) is from the NIST CODATA Website \url{http://physics.nist.gov/cuu/Constants/index.html}.
 
-Note that in reference 3 "a biologically relevant 13C/12C isotope ratio of 1.096\% was used instead of the more carbonate specific ratio of 1.112\%."  The 13C/12C ratio used by \code{isoDistN} is 1.081\%.  
+Note that in reference 3 "a biologically relevant 13C/12C isotope ratio of 1.096\% was used instead of the more carbonate specific ratio of 1.112\%."  The 13C/12C ratio used by \code{IsotopicDistributionN} is 1.081\%.  
 }
 \value{
 A data frame with the following column names.
@@ -47,15 +47,11 @@ A data frame with the following column names.
 ## simulate a peptide with 0.368 to 100 percent incorporation and plot
 dn <- IsotopicDistributionN("NECFLQHK", incorp = 0.00368)
 dn$t <- "incorp = 0.368\%"
-d25 <- IsotopicDistributionN("NECFLQHK", incorp = 0.25)
-d25$t <- "incorp = 25\%"
 d50 <- IsotopicDistributionN("NECFLQHK", incorp = 0.5)
 d50$t <- "incorp = 50\%"
-d75 <- IsotopicDistributionN("NECFLQHK", incorp = 0.75)
-d75$t <- "incorp = 75\%"
 d99 <- IsotopicDistributionN("NECFLQHK", incorp = 0.99)
 d99$t <- "incorp = 99\%"
-x <- rbind(dn, d25, d50, d75, d99)
+x <- rbind(dn, d50, d99)
 library(lattice)
 xyplot(percent ~ mz | t, data = x,
     type = "h", 
@@ -63,6 +59,20 @@ xyplot(percent ~ mz | t, data = x,
     ylab = "intensity (\%)",
     main = "Isotopic distribution of peptide NECFLQHK with 
             varying nitrogen-15 incorporation")
+\dontrun{
+## not run            
+## simulate peptide DVFLGMFLYPYAR with oxidized methionine
+IsotopicDistributionN("DVFLGmFLYPYAR", incorp = 0.5, 
+                      custom = list(code = "m", 
+                                    elements = c(C=5, H=9, N=1, O=2, S=1)))
+}
+
+% To simulate a peptide with more than one modified amino acid, try 
+% using something like IsotopicDistributionN("DVFLGFLYPYARx", incorp = 0.5, 
+% custom = list(code = "x", elements = c(C=10, H=18, N=2, O=4, S=2)))
+% where x represents all modified residues and elements is the sum of all 
+% modified residues.
+
 }
 
 

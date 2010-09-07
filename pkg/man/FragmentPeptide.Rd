@@ -51,7 +51,7 @@ km <- MonoisotopicMass(formula = list(C = 6, H = 12, N = 2, O = 1),
 FragmentPeptide("NECFLQHk", custom = list(code = "k", mass = km))
 
 ## fragment a vector of peptides produced by Digest
-x <- Digest(hsaSequence)
+x <- Digest(example.sequence)
 y <- subset(x, nchar(x$peptide) > 5 & nchar(x$peptide) < 12)
 FragmentPeptide(y$peptide)
 }
