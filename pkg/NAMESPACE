@@ -8,9 +8,12 @@ export(ConvertPeptide,
        IsotopicDistribution,
        IsotopicDistributionHDX,
        IsotopicDistributionN,
+       ListFormula,
        MolecularWeight,
        MonoisotopicMass,
        PeptideSpectrum,
+       ReadMspDirectory,
+       ReadMspFile,
        RetentionIndex,
        SpectrumSimilarity
 )

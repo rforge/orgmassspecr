@@ -1,0 +1,20 @@
+\name{ListFormula}
+\alias{ListFormula}
+\title{Convert an Elemental Formula to a List}
+\description{Convert a character string representing an elemental formula to a list representing the elemental formula.  The list can be used as input to other functions.}
+\usage{
+ListFormula(elemental.formula)
+}
+\arguments{
+  \item{elemental.formula}{character string representing the elemental formula.}
+}
+\details{
+To maintain compatibility with \code{\link{MolecularWeight}}, \code{\link{MonoisotopicMass}}, and \code{\link{IsotopicDistribution}} the elemental formula can contain only C,H,N,O,S,P,Br,Cl,F, and Si. Elements not in this set will be ignored and a warning will be generated. The function can handle repeated elements, but not element multiplication indicated by parenthesis.
+}
+\seealso{\code{\link{ConvertPeptide}}}
+\author{Nathan G. Dodder}
+\examples{
+ListFormula("C14H8Cl4")
+ListFormula("C6H5OH")
+}
+

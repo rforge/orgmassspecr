@@ -8,4 +8,5 @@
 \source{
 Precursor ion spectrum of peptide YEVQGEVFTKPQLWP acquired on a MALDI-TOF/TOF.  The peptide is labeled with approximately 99\% nitrogen-15.
 }
+\author{Protein expressed by Wei-Li Liao.}
 \keyword{datasets}

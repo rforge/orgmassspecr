@@ -41,14 +41,19 @@ A data frame with the following column names.  The data frame is arranged this w
     \item{ms2mz}{monoisotopic \emph{m/z} values for the product ions.}
 }
 \author{Nathan G. Dodder and Katharine M. Mullen}
-\seealso{\code{\link{MonoisotopicMass}}, \code{\link{Digest}},  \code{\link{PeptideSpectrum}}}
+\seealso{\code{\link{MonoisotopicMass}}, \code{\link{Digest}}, \code{\link{PeptideSpectrum}}}
 \examples{
 ## fragment unlabeled peptide
 FragmentPeptide("NECFLQHK")
+
 ## fragment peptide with carbon-13 labeled lysine
-km <- MonoisotopicMass(formula = list(C = 6, H = 12, N = 2, O = 1),
+k.mass <- MonoisotopicMass(formula = list(C = 6, H = 12, N = 2, O = 1),
                        isotopes = list(C = 13.0033548378)) 
-FragmentPeptide("NECFLQHk", custom = list(code = "k", mass = km))
+FragmentPeptide("NECFLQHk", custom = list(code = "k", mass = k.mass))
+
+## fragment peptide with two modifications
+m.mass <- MonoisotopicMass(formula = list(C=5, H=9, N=1, O=2, S=1))
+FragmentPeptide("NDmELWk", custom = list(code = c("m", "k"), mass = c(m.mass, k.mass)))
 
 ## fragment a vector of peptides produced by Digest
 x <- Digest(example.sequence)
