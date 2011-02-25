@@ -3,30 +3,70 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>OrgMassSpecR-Functions</title>
+<title>OrgMassSpecR</title>
 <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
-<p><a href = "index.html">Main Page</a></p>
 
-<h3>Functions</h3>
+    <div class="title">
+      <div class="subtitle">
+      Organic Mass Spectrometry
+      </div>
+      OrgMassSpecR
+    </div>
 
-<p><strong class = "fn">ConvertPeptide</strong>: Convert single amino acid codes to an elemental formula or three letter codes.</p>
-<p><strong class = "fn">DeadVolume</strong>: Calculate the internal volume of a defined length of tubing.</p>
-<p><strong class = "fn">Digest</strong>: Cleave an amino acid sequence (a protein or peptide) according to enzyme specific rules and calculate the precursor ion m/z values.</p>
-<p><strong class = "fn">DrawChromatogram</strong>: Plot a chromatogram, color the area under specified peak(s), and calculate the peak area(s).</p>
-<p><strong class = "fn">ExchangeableAmides</strong>: Determine the number of backbone amide hydrogens given a protein/peptide sequence.  Used in hydrogen-deuterium exchange experiments.</p>
-<p><strong class = "fn">FlowTime</strong>: Calculate the time required for a liquid to flow through a defined length of tubing.</p>
-<p><strong class = "fn">FragmentPeptide</strong>: Determine the b- and y-ions or c- and z-ions produced by the fragmentation of a peptide by tandem mass spectrometry.</p>
-<p><strong class = "fn">IsotopicDistribution</strong>: Simulate the isotopic distribution of an organic molecule.</p>
-<p><strong class = "fn">IsotopicDistributionHDX</strong>: Simulate the isotopic distribution of a peptide undergoing hydrogen-deuterium exchange.</p>
-<p><strong class = "fn">IsotopicDistributionN</strong>: Simulate the isotopic distribution of a peptide with varying amounts of nitrogen-15 incorporation.</p>
-<p><strong class = "fn">MolecularWeight</strong>: Calculate the molecular weight of an organic molecule.</p>
-<p><strong class = "fn">MonoisotopicMass</strong>: Calculate the monoisotopic mass or monoisotopic m/z value of an organic molecule.</p>
-<p><strong class = "fn">PeptideSpectrum</strong>: Plot a peptide fragmentation mass spectrum, with the b- and y-ions or c- and z-ions identified.</p>
-<p><strong class = "fn">RetentionIndex</strong>: Calculate the the non-isothermal gas chromatographic retention index of a target compound.</p>
-<p><strong class = "fn">SpectrumSimilarity</strong>: Generate a head-to-tail plot of two mass spectra and calculate a similarity score.</p>
+   <div class="head">
+      <div class="section">
+        <a href = "index.html">Home</a>
+      </div>
+      <div class="section selected">
+        Functions
+      </div>
+      <div class="section">
+        <a href = "references.html">References</a>
+      </div>
+      <div class="section">
+        <a href = "examples.html">Examples</a>
+      </div>
+      <div class="section">
+        <a href = "start.html">Getting Started</a>
+      </div>
+    </div>
 
 
+
+
+<div class="body">
+
+<h3>General</h3>
+<p>
+<ul>
+<li><code class="source">MolecularWeight</code>: Calculate the molecular weight of an organic molecule.
+<li><code class="source">MonoisotopicMass</code>: Calculate the monoisotopic mass or monoisotopic m/z value of an organic molecule.
+<li><code class="source">IsotopicDistribution</code>: Simulate the isotopic distribution of an organic molecule.
+<li><code class="source">ListForumula</code>: Convert a character string representing an elemental formula to a list representing the elemental formula.
+<li><code class="source">DrawChromatogram</code>: Plot a chromatogram, color the area under specified peak(s), and calculate the peak area(s).
+<li><code class="source">SpectrumSimilarity</code>: Generate a head-to-tail plot of two mass spectra and calculate a similarity score.
+<li><code class="source">RetentionIndex</code>: Calculate the the non-isothermal gas chromatographic retention index of a target compound.
+<li><code class="source">DeadVolume</code>: Calculate the internal volume of a defined length of tubing.
+<li><code class="source">FlowTime</code>: Calculate the time required for a liquid to flow through a defined length of tubing.
+</ul>
+</p>
+
+<h3>Protein/Peptide Related</h3>
+<p>
+<ul>
+<li><code class="source">Digest</code>: Cleave an amino acid sequence (a protein or peptide) according to enzyme specific rules and calculate the precursor ion m/z values.
+<li><code class="source">FragmentPeptide</code>: Determine the b- and y-ions or c- and z-ions produced by the fragmentation of a peptide by tandem mass spectrometry.
+<li><code class="source">ConvertPeptide</code>: Convert single amino acid codes to an elemental formula or three letter codes.
+<li><code class="source">PeptideSpectrum</code>: Plot a peptide fragmentation mass spectrum, with the b- and y-ions or c- and z-ions identified.
+<li><code class="source">IsotopicDistributionN</code>: Simulate the isotopic distribution of a peptide with varying amounts of nitrogen-15 incorporation.
+<li><code class="source">IsotopicDistributionHDX</code>: Simulate the isotopic distribution of a peptide undergoing hydrogen-deuterium exchange.
+<li><code class="source">ExchangeableAmides</code>: Determine the number of backbone amide hydrogens given a protein/peptide sequence.  Used in hydrogen-deuterium exchange experiments.
+</ul>
+</p>
+</div>
 </body>
+</html>
