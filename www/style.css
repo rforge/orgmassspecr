@@ -80,5 +80,6 @@ sub, sup {
 }
 
 .source {
+  font-size: 15px;
   color: FireBrick;
-  }
+}
