@@ -2,7 +2,7 @@
 
 body {
   font: 14px/150% Helvetica Neue, sans-serif;
-  background-color: Snow;
+  background-color: #efefef
   }
 
 a {
@@ -28,9 +28,10 @@ a:active {
 }
 
 .title {
-  background: Snow;
+  background: #efefef;
   font-size: 20px;
   font-weight: bold;
+  color: #000;
 }
 
 .title a {
