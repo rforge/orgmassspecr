@@ -112,7 +112,7 @@ c13.labeled <- FragmentPeptide("YLYEIAr", custom = list(code = "r",
 head(c13.labeled)
 @
 
-The MRM transitions for fully $^{15}$N-labeled \texttt{YLYEIAR} are calculated as follows.  Note that \texttt{FragmentPeptide}, and \texttt{Digest}, do not label the nitrogens incorporated into the peptide the due to iodoacetamide treatment (when \texttt{IAA = TRUE} and \texttt{15N = TRUE}). 
+The MRM transitions for fully $^{15}$N-labeled \texttt{YLYEIAR} are calculated as follows.  Note that \texttt{FragmentPeptide}, and \texttt{Digest}, do not label the nitrogens incorporated into the peptide due to iodoacetamide treatment (when \texttt{IAA = TRUE} and \texttt{15N = TRUE}). 
 
 <<>>=
 n15.labeled <- FragmentPeptide("YLYEIAR", N15 = TRUE)

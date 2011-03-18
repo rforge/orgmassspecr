@@ -23,5 +23,5 @@ A data frame with the following column names:
 \author{Nathan G. Dodder}
 \seealso{\code{\link{ReadMspDirectory}}}
 \examples{
-ReadMspFile(paste(system.file(package = "OrgMassSpecR"), "/extdata/spectra/pentaBDE1.msp", sep = ""))
+ReadMspFile(paste(system.file(package = "OrgMassSpecR"), "/extdata/msp/pentaBDE.msp", sep = ""))
 }

@@ -26,6 +26,7 @@ A data frame with the following column names:
 \author{Nathan G. Dodder}
 \seealso{\code{\link{ReadMspFile}}}
 \examples{
-## The package directory *spectra* contains two .msp files 
-ReadMspDirectory(paste(system.file(package = "OrgMassSpecR"), "/extdata/spectra", sep = ""))
+## The package directory msp contains two .msp files 
+ReadMspDirectory(paste(system.file(package = "OrgMassSpecR"), 
+  "/extdata/msp", sep = ""))
 }

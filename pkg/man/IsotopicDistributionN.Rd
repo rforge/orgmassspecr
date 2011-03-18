@@ -59,8 +59,7 @@ xyplot(percent ~ mz | t, data = x,
     ylab = "intensity (\%)",
     main = "Isotopic distribution of peptide NECFLQHK with 
             varying nitrogen-15 incorporation")
-\dontrun{
-## not run            
+\dontrun{         
 ## simulate peptide DVFLGMFLYPYAR with oxidized methionine
 IsotopicDistributionN("DVFLGmFLYPYAR", incorp = 0.5, 
                       custom = list(code = "m", 
