@@ -7,7 +7,8 @@ ListFormula <- function(elemental.formula) {
     z <- substr(elemental.formula, chr[[1]][i], chr[[1]][i] + y - 1)
     if (!(z == "C" | z =="H" | z =="N" | z =="O" | z =="S" | z =="P"
         | z =="Br" | z =="Cl" | z =="F" | z =="Si"))
-      warning("Elemental formula contains element not of C,H,N,O,S,P,Br,Cl,F,Si.")
+      warning(paste("Elemental formula", elemental.formula,
+                    "contains element not of C,H,N,O,S,P,Br,Cl,F,Si."))
   }
 
   # get number of atoms
