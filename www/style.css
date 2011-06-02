@@ -2,21 +2,21 @@
 
 body {
   font: 14px/150% Helvetica Neue, sans-serif;
-  background-color: #efefef;  /* EOEOEO */
+  background-color: white;
   }
 
 a {
-  color: RoyalBlue;
+  color: blue;
   text-decoration: none;
   }
   
 a:hover {
-  color: blue;
+  color: #4169E1;
   text-decoration: underline;
   }
   
 a:active {
-  color: #cedb9c;
+  color: #87CEEB;
 }
 
 .title, .head, .subhead, .body, .foot {
@@ -28,10 +28,10 @@ a:active {
 }
 
 .title {
-  background: #efefef;
   font-size: 20px;
   font-weight: bold;
-  color: #000;
+  color: black;
+  /* background: maroon; */
 }
 
 .title a {
@@ -47,7 +47,7 @@ sub, sup {
   text-transform: lowercase;
   font-variant: small-caps;
   font-weight: normal;
-  color: #000;
+  color: black;
 }
 
 .head, .subhead {
@@ -56,11 +56,11 @@ sub, sup {
   height: 1.5em;
   font-weight: bold;
   border-bottom: solid 1px #aaa;
-  border-right: solid 1px #aaa;
-  border-top: solid 1px #aaa;
-  border-left: solid 1px #aaa;
   margin-top: 10px;
   padding-top: 15px;
+  /* border-right: solid 1px #aaa;
+  border-top: solid 1px #aaa;
+  border-left: solid 1px #aaa; */
 }
 
 .section {
@@ -74,10 +74,10 @@ sub, sup {
 
 .body {
   background: #fff;
-  border-right: solid 1px #aaa;
-  border-bottom: solid 1px #aaa;
-  border-left: solid 1px #aaa;
   padding-bottom: 30px;
+  /* border-right: solid 1px #aaa;
+  border-bottom: solid 1px #aaa;
+  border-left: solid 1px #aaa; */
 }
 
 .source {
