@@ -1,6 +1,16 @@
 \name{NEWS}
 \title{OrgMassSpecR News}
 
+\section{Changes in version 0.3-6 (2011-08-26)}{
+
+  \itemize{
+  
+    \item Function ConvertConcentration added.
+
+  }
+
+}
+
 \section{Changes in version 0.3-2 (2011-04-08)}{
 
   \itemize{
