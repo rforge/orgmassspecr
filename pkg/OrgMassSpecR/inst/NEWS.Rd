@@ -1,6 +1,16 @@
 \name{NEWS}
 \title{OrgMassSpecR News}
 
+\section{Changes in version 0.3-8 (2011-10-10)}{
+
+  \itemize{
+
+    \item Function ReadMspFile added.
+
+  }
+
+}
+
 \section{Changes in version 0.3-6 (2011-08-26)}{
 
   \itemize{
