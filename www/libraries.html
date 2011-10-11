@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>OrgMassSpecR</title>
+<link type="text/css" rel="stylesheet" href="style20110603.css">
+</head>
+
+<body>
+
+ <div class="title">
+        <img src = "drawing.png">
+      <div class="subtitle">
+        <p><br><br>Organic Mass Spectrometry</p>
+      </div>
+    </div>
+
+   <div class="head">
+      <div class="section">
+        <a href = "index.html">Home</a>
+      </div>
+      <div class="section">
+        <a href = "functions.html">Functions</a>
+      </div>
+      <div class="section selected">
+        Spectral Libraries
+      </div>
+      <div class="section">
+        <a href = "references.html">References</a>
+      </div>
+      <div class="section">
+        <a href = "examples.html">Examples</a>
+      </div>
+      <div class="section">
+        <a href = "start.html">Getting Started</a>
+      </div>
+    </div>
+
+<div class="body">
+
+
+<p>Mass spectral libraries are provided as companion packages to
+OrgMassSpecR. The library content is currently focused on electron
+impact (EI) spectra of anthropogenic environmental contaminants and
+halogenated natural products. The libraries are intended to document
+and organize the evidence for compound identifications, and thus have
+a somewhat different focus than standard reference databases such as
+the <a href="http://www.nist.gov/srd/nist1a.cfm">NIST/EPA/NIH
+library</a>. For example, the OrgMassSpecR libraries store fragment
+ion identifications obtained by the manual interpretation of mass
+spectra and allow organization based on compound class and other
+parameters. The libraries may also contain interesting but
+unidentified mass spectra.
+
+<p>Each library package generates a PDF report containing the
+annotated spectra, and a single text file containing all spectra in
+NIST MSP format. The PDF report allows the spectra and identification
+evidence to be viewed without specialized software. The MSP file can
+be used to import the spectra into other software, for example to
+create a custom searchable library in the NIST MS Search program. The
+PDF reports and MSP files are available below (through links to
+Dropbox). MD5 checksums are given to verify the file integrity. Within
+the R packages, the spectra and metatdata are stored in CSV formats
+for working with the data in R, and the packages may contain functions
+to generate summary tables and plots.
+
+<p>The packages are available through
+the <a href="http://r-forge.r-project.org/projects/orgmassspecr/">OrgMassSpecR
+R-Forge</a> webpage, under R packages.
+
+<h3>California Sea Lion Contaminant Library (Example)</h3>
+<p>This library is provided as proof-of-concept.  It contains a
+vignette <a href="OrgMassSpecR-libraries.pdf">(PDF)</a> describing the
+general file structure and functionality of spectral library
+packages.</p>
+<em>Package Name:</em> SpecLibExample<br>
+<em>Authors:</em> Eunha Hoh and Nathan Dodder<br>
+<em>Sample:</em> Single sea lion blubber sample from a 4+ year old
+male stranded in southern California.<br>
+<em>Instrument:</em> GCxGC-TOF in EI mode.<br>
+<em>Compounds:</em> 35 anthropogenic contaminants, 3 suspected natural
+halogenated products, and 1 unknown.<br>
+<em>PDF Report:</em> <a href =
+"http://dl.dropbox.com/u/6649072/OrgMassSpecR/SpecLibExample.pdf">SpecLibExample.pdf</a>. 595 KB. MD5 checksum: aa07e28848b7bff311d6dcdeeb097fc1<br>
+<em>NIST MSP Text Format:</em> <a href =
+"http://dl.dropbox.com/u/6649072/OrgMassSpecR/SpecLibExample.txt">SpecLibExample.txt</a>. 49 KB. MD5 checksum: 31da4996d34b7c6da9635608261b5890
+
+</div>
+</body>
+</html>
