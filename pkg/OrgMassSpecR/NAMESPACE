@@ -16,5 +16,6 @@ export(ConvertConcentration,
        ReadMspDirectory,
        ReadMspFile,
        RetentionIndex,
-       SpectrumSimilarity
+       SpectrumSimilarity,
+       WriteMspFile
 )
