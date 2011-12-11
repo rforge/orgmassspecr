@@ -1,8 +1,8 @@
 Package: OrgMassSpecR
 Type: Package
 Title: Organic Mass Spectrometry
-Version: 0.3-8
-Date: 2011-10-10
+Version: 0.3-10
+Date: 2011-12-11
 Author: Nathan G. Dodder. Code contributions from Katharine M. Mullen.
 Maintainer: Nathan Dodder <nathand@sccwrp.org>
 Depends: R (>= 2.13.0)

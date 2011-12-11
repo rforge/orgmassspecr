@@ -33,7 +33,7 @@
   and
 
   \deqn{percent lipid = \frac{lipid weight}{wet weight} * 100}{percent
-  lipid = lipid weight / wet weight}
+  lipid = (lipid weight / wet weight) * 100}
 
   where \code{wet weight}, etc., refers to the sample concentration
   basis. For example, ng analyte/g wet weight. 
