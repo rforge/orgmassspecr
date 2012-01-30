@@ -1,11 +1,11 @@
 \name{NEWS}
 \title{OrgMassSpecR News}
 
-\section{Changes in version 0.3-11 (2012-01-29){
+\section{Changes in version 0.3-11 (2012-01-29)}{
 
     \itemize{
 
-      \item R >= 2.14.1 required due to changes in the vignettes file
+      \item R >= 2.14.1 required due to changes in the vignette file
       structure.
 
     }
