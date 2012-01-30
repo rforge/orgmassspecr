@@ -58,7 +58,7 @@ LibraryReport <- function(spectra = example.spec,
   
   if (pdf == TRUE) {
     pdf(file = pdf.file, width = 10.5, height = 8, title = pdf.title,
-        paper = "usr", maxRasters = nrow(metadata))
+        paper = "usr")
   }
 
 
