@@ -12,7 +12,7 @@ ConvertConcentration <- function(x, convert, percent) {
 
   WetToDry <- function(wet, percent.moisture) {
 
-    dry <- wet * 1 / (1 - (percent.moisture / 100))
+    dry <- wet / (1 - (percent.moisture / 100))
 
     return(dry)
 
