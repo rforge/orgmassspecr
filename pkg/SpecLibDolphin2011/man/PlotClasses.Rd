@@ -3,7 +3,7 @@
 \title{Plot 2D Chromatograms}
 \description{Plot 1st and 2nd dimension retention times grouped by
   (1) halogenation, (2) three example compound classes, and (3) four
-  unknown classes. Three panels.
+  unknown classes. Three panels. This is Figure 2 in the manuscript.
 }
 \usage{PlotClasses(lib = dolphin2011.meta)
 }

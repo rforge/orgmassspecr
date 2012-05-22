@@ -1,7 +1,8 @@
 \name{MakeTable}
 \alias{MakeTable}
 \title{Make summary table}
-\description{Summarized compound class information.
+\description{Summarized compound class information. Makes a table
+  similar to Table 1 in the manuscript.
 }
 \usage{MakeTable(x = dolphin2011.meta)
 }
