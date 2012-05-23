@@ -1,12 +1,12 @@
 Package: SpecLibExample
 Type: Package
 Title: Example OrgMassSpecR Mass Spectral Library
-Version: 0.5-6
-Date: 2012-05-22
+Version: 0.5-7
+Date: 2012-05-23
 Author: Nathan G. Dodder and Eunha Hoh
 Maintainer: Nathan Dodder <nathand@sccwrp.org>
 Depends: R (>= 2.14.1), OrgMassSpecR, grid, png
-Description: Contains a mass spectral library of exogenous compounds observed in California sea lion blubber by GCxGC-TOF/MS in electron ionization mode.
+Description: Contains a vignette describing the general file structure and functionality of spectral library packages, and an example library of exogenous compounds observed in blubber from a male sea lion (Zalophus californianus) fatally stranded in the year 2000 in southern California.
 License: BSD
 URL: http://orgmassspecr.r-forge.r-project.org/
 LazyData: yes
