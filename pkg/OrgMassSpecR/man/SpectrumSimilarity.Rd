@@ -8,8 +8,8 @@ SpectrumSimilarity(spec.top, spec.bottom, t = 0.25, b = 10,
                    xlim = c(50, 1200))
 }
 \arguments{
-    \item{spec.top}{data frame containing the experimental MS/MS peak list with the \emph{m/z} values in the first column and corresponding intensities in the second}
-    \item{spec.bottom}{data frame containing the experimental MS/MS peak list with the \emph{m/z} values in the first column and corresponding intensities in the second}
+    \item{spec.top}{data frame containing the experimental spectrum's peak list with the \emph{m/z} values in the first column and corresponding intensities in the second}
+    \item{spec.bottom}{data frame containing the reference spectrum's peak list with the \emph{m/z} values in the first column and corresponding intensities in the second}
     \item{t}{numeric value specifying the tolerance used to align the \emph{m/z} values of the two spectra.}
     \item{b}{numeric value specifying the baseline threshold for peak identification.  Expressed as a percent of the maximum intensity.}
     \item{top.label}{character string to label the top spectrum.}
@@ -24,7 +24,7 @@ Note that, although both are based on the cosine of the two intensity vectors, t
 \references{
 "Optimization and Testing of Mass Spectral Library Search Algorithms for Compound Identification," Stein SE, Scott DR, \emph{Journal of the American Society for Mass Spectrometry}, 1994, 5, 859-866.
 }
-\value{A vector containing the similarity score. The data frame showing the peak alignment is printed.}
+\value{A vector containing the similarity score. The data frame showing the peak alignment is printed. The head-to-tail plot of the two mass spectra is printed.}
 \author{Nathan G. Dodder}
 \seealso{\code{\link{PeptideSpectrum}}}
 \examples{
