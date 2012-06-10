@@ -11,7 +11,9 @@ IsotopicDistributionN(sequence, incorp, IAA = TRUE, charge = 1,
     \item{sequence}{character vector specifying the amino acid sequence.}
     \item{incorp}{numeric value from 0 to 1, specifying the fraction of nitrogen-15.}
     \item{IAA}{logical. \code{TRUE} specifies iodoacetylated cysteine and \code{FALSE} specifies unmodified cystine.}
-    \item{charge}{numeric value specifying the number of positive charges (\eqn{[M + nH]^{n+}}{[M + nH]n+})}
+    \item{charge}{numeric value specifying the number of positive
+      charges. Must be 1, 2, or 3. One proton per charge is added to the
+      amino acid sequence (\eqn{[M + nH]^{n+}}{[M + nH]n+}).}
     \item{custom}{a list specifying a user defined residue as \code{custom = list(code, elements)}, where \code{code} is a one letter character vector representing the custom residue and \code{elements} is a vector of the number of elements in the character vector, with the indicies equal to C,H,N,O,S,or P.}
 }
 \details{

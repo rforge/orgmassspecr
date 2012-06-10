@@ -6,7 +6,7 @@ IsotopicDistributionN <- function(sequence, incorp, IAA = TRUE, charge = 1,
         custom_elements[names(custom$elements)] <- custom$elements
     }
 
-    if(charge < 0 | charge > 3) stop("charge must be 1, 2, or 3")
+    if(charge < 1 | charge > 3) stop("charge must be 1, 2, or 3")
 
     seq_vector <- strsplit(sequence, split = "")[[1]]
     x <- c(C = 0, H = 0, N = 0, O = 0, S = 0, P = 0)
@@ -93,8 +93,8 @@ IsotopicDistributionN <- function(sequence, incorp, IAA = TRUE, charge = 1,
                           prob = c(0.999885, 0.000115)))
 	
         ## m/z of molecule
-        if(charge != 0) mz <- sum(mc, mh, mn, mo, ms, mch, mn_iaa) / charge 
-            else mz <- mz <- sum(mc, mh, mn, mo, ms, mch, mn_iaa)		
+        mz <- sum(mc, mh, mn, mo, ms, mch, mn_iaa) / charge 
+        
         return(mz)	
     }
 	
