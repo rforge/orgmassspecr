@@ -20,7 +20,7 @@
 WriteMspFile(spectra = dolphin2011.spec,
              metadata = dolphin2011.meta,
              filename = "SpecLibDolphin2011.txt",
-             comment = "A non-targeted GCxGC/TOF-MS method and software for inventorying persistent and bioaccumulative contaminants in marine environments, Environ. Sci. Technol., 2012, in press.")
+             comment = "Contaminants in common dolphin (Delphinus delphis) blubber; 2006 Massachusetts stranding; Hoh E, et al., Environ. Sci. Technol, in press, 2012; dx.doi.org/10.1021/es301139q")
 }
 }
 \keyword{datasets} 
