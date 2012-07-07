@@ -89,8 +89,9 @@ LibraryReport <- function(spectra = dolphin2011.spec,
     grid.text("Literature Reference:" , x = 0.5, y = 0.8, gp = gpar(cex = 1.25))
     
     grid.text("Eunha Hoh, Nathan G. Dodder, Steven J. Lehotay, Kristin C. Pangallo, Christopher M. Reddy, and Keith A. Maruya 
-\"A non-targeted GCxGC/TOF-MS method and software for inventorying persistent and bioaccumulative contaminants in marine 
-environments\", Environmental Science and Technology, in press.",
+\"Nontargeted Comprehensive Two-Dimensional Gas Chromatography/Time-of-Flight Mass Spectrometry Method and Software for 
+Inventorying Persistent and Bioaccumulative Contaminants in Marine Environments\", 
+Environmental Science and Technology, in press, dx.doi.org/10.1021/es301139q",
               y = 0.7, gp = gpar(cex = 1))
     
     grid.text("Web Reference: ", x = 0.5, y = 0.55, gp = gpar(cex = 1.25))
