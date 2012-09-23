@@ -1,8 +1,8 @@
 Package: SpecLibDolphin2011
 Type: Package
 Title: Mass Spectral Library Dolphin Blubber 2011
-Version: 0.5
-Date: 2012-08-22
+Version: 0.5-1
+Date: 2012-09-23
 Author: Nathan G. Dodder, with study authors Eunha Hoh, Steven J. Lehotay, Kristin C. Pangallo, Christopher M. Reddy, and Keith A. Maruya.
 Maintainer: Nathan Dodder <nathand@sccwrp.org>
 Depends: R (>= 2.14.1), OrgMassSpecR (>= 0.3-12), grid, png
