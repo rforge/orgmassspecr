@@ -25,6 +25,4 @@ MonoisotopicMass(formula = ConvertPeptide("SEQENCE"), charge = 1)
 
 # as input to MolecularWeight
 MolecularWeight(formula = ConvertPeptide("SEQENCE"))
-
-# as input to IsotopicDistribution
 }
