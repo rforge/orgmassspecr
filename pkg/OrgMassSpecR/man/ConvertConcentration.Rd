@@ -23,20 +23,15 @@
 
   Conversion between wet weight basis and dry weight basis requires
   \code{percent} to equal the percent moisture in the sample. Conversion
-  bwtween wet weight basis and lipid weight basis requires
+  between wet weight basis and lipid weight basis requires
   \code{percent} to equal the percent lipid in the sample. The following
-  definitions for percent moisture and percent lipid are used:
+  definitions for percent moisture and percent lipid are used.
 
   \deqn{percent moisture = \frac{wet weight - dry weight}{wet weight} *
   100}{percent moisture = ((wet weight - dry weight) / wet weight) * 100}
 
-  and
-
   \deqn{percent lipid = \frac{lipid weight}{wet weight} * 100}{percent
-  lipid = (lipid weight / wet weight) * 100}
-
-  where \code{wet weight}, etc., refers to the sample concentration
-  basis. For example, ng analyte/g wet weight. 
+  lipid = (lipid weight / wet weight) * 100} 
 
   The unit prefixes (for example ng/g or pg/g) are not changed by the
   conversion.
