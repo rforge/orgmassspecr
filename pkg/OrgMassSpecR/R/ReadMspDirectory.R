@@ -4,6 +4,8 @@ ReadMspDirectory <- function(directory, skip = 2, comment.char = "") {
 
     msp <- read.table(file = file, sep = ";", skip = skip, fill = TRUE, 
                       stringsAsFactors = FALSE, comment.char = comment.char)
+    
+    print(paste("Reading file", file))
 
     msp <- msp[-ncol(msp)]
 
