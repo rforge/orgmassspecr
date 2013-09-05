@@ -52,9 +52,9 @@ Digest <- function(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE,
 
     if(missed > 0) {                               # peptides if missed cleavages > 0
         for(i in 1:missed) {
-            start <- start[1:(length(start) - i)]
-            stop <- stop[(1 + i):length(stop)]
-            peptide <- cleave(sequence, start, stop, i)
+            start_tmp <- start[1:(length(start) - i)]
+            stop_tmp <- stop[(1 + i):length(stop)]
+            peptide <- cleave(sequence, start_tmp, stop_tmp, i)
             results <- rbind(results, peptide) 
         } 
     }

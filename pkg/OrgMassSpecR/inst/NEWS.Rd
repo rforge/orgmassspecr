@@ -1,6 +1,16 @@
 \name{NEWS}
 \title{OrgMassSpecR News}
 
+\section{Changes in version 0.3-18 (2013-09-04)}{
+
+    \itemize{
+
+      \item Function Digest fixed. It now correctly determines peptide sequences when the number of missed cleavages is > 1 (thanks to S. Michalik).
+
+    }
+
+}
+
 \section{Changes in version 0.3-11 (2012-01-29)}{
 
     \itemize{
