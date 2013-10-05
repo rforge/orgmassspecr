@@ -1,6 +1,16 @@
 \name{NEWS}
 \title{OrgMassSpecR News}
 
+\section{Changes in version 0.4 (2013-10-04)}{
+
+    \itemize{
+
+      \item Added trypsin.strict option to Digest function (thanks to S. Michalik).
+
+    }
+
+}
+
 \section{Changes in version 0.3-18 (2013-09-04)}{
 
     \itemize{

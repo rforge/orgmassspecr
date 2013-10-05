@@ -6,6 +6,7 @@ Digest <- function(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE,
 
     seq_vector <- strsplit(sequence, split = "")[[1]]
     end_position <- length(seq_vector)
+    
     if(enzyme == "trypsin") {                                
         if(seq_vector[end_position] == "K" | seq_vector[end_position] == "R") {
            seq_vector[end_position] <- "!"
@@ -16,6 +17,16 @@ Digest <- function(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE,
         seq_vector <- strsplit(seq_string, split = "")[[1]]
         stop <- grep("K|R", seq_vector)
         start <- stop + 1    
+    }
+    
+    if(enzyme == "trypsin.strict") {                                
+      if(seq_vector[end_position] == "K" | seq_vector[end_position] == "R") {
+        seq_vector[end_position] <- "!"
+        seq_string <- paste(seq_vector, collapse = "")
+      } else seq_string <- sequence
+      seq_vector <- strsplit(seq_string, split = "")[[1]]
+      stop <- grep("K|R", seq_vector)
+      start <- stop + 1    
     }
 
     if(enzyme == "pepsin") {
@@ -32,7 +43,7 @@ Digest <- function(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE,
    
     ## error checking
 
-    if(enzyme != "trypsin" & enzyme != "pepsin") stop("undefined enzyme, defined enzymes are trypsin and pepsin")                    
+    if(enzyme != "trypsin" & enzyme != "trypsin.strict" & enzyme != "pepsin") stop("undefined enzyme, defined enzymes are trypsin, trypsin.strict, and pepsin")                    
     if(length(stop) == 0) warning("sequence does not contain cleavage sites")
     if(missed > length(stop)) stop("number of specified missed cleavages is greater than the maximum possible")
 

@@ -9,7 +9,7 @@ Digest(sequence, enzyme = "trypsin", missed = 0, IAA = TRUE,
 }
 \arguments{
     \item{sequence}{a character string representing the amino acid sequence to be cleaved by the enzyme.}
-    \item{enzyme}{a character string specifying the rules for cleavage.  Options are \code{"trypsin"} (default) or \code{"pepsin"}.}
+    \item{enzyme}{a character string specifying the rules for cleavage.  Options are \code{"trypsin"} (default),                    \code{"trypsin.strict"} (see details), or \code{"pepsin"}.}
     \item{missed}{the maximum number of missed cleavages.  Must be an integer of 0 (default) or greater.  An error will result if the specified number of missed cleavages is greater than the maximum possible number of missed cleavages.}
     \item{IAA}{logical. \code{TRUE} specifies iodoacetylated cysteine and \code{FALSE} specifies unmodified cystine.}
     \item{N15}{logical indicating if the nitrogen-15 isotope should be used in place of the default nitrogen-14 isotope.}
@@ -30,7 +30,9 @@ H = histidine       \tab Y = tyrosine\cr
 I = isoleucine      \tab V = valine
 }
 
-If \code{"trypsin"} is specified, the sequence is cleaved on the c-terminal side of K and R residues, except if K or R is followed by P.  If \code{"pepsin"} is specified, the sequence is cleaved on the c-terminal side of F, L, W, Y, A, E, and Q residues.  This rule is specific to pepsin at pH \eqn{>} 2, as used in hydrogen-deuterium exchange experiments.
+If \code{"trypsin"} is specified, the sequence is cleaved on the c-terminal side of K and R residues, except if K or R is followed by P.  If \code{"trypsin.strict"} is specified, the sequence is cleaved on the c-terminal side of K and R residues. If \code{"pepsin"} is specified, the sequence is cleaved on the c-terminal side of F, L, W, Y, A, E, and Q residues.  This rule is specific to pepsin at pH \eqn{>} 2, as used in hydrogen-deuterium exchange experiments.
+
+When \code{"trypsin"} is specified, KP and RP are not considered missed cleavages when \code{missed} is \eqn{>} 0.
 
 The argument \code{IAA} specifies treatment of the protein with iodoacetamide.  This treatment produces iodoacetylated cysteine residues (elemental formula C5H8N2O2S).
 
@@ -65,4 +67,7 @@ modifiedHsaSequence <- paste(modifiedHsaSequence, collapse = "")
 Digest(modifiedHsaSequence, custom = list(code = c("s","M"), 
        mass = c(MonoisotopicMass(list(C=3, H=6, N=1, O=5, P=1)),
                 MonoisotopicMass(list(C=5, H=9, N=1, O=2, S=1)))))
+                
+## digest human serum albumin with strict rules
+Digest(example.sequence, enzyme = "trypsin.strict")
 }
