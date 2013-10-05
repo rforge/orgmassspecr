@@ -2,12 +2,12 @@ Package: OrgMassSpecR
 Type: Package
 Title: Organic Mass Spectrometry
 Version: 0.4
-Date: 2013-10-04
+Date: 2013-10-05
 Author: Nathan G. Dodder, with code contributions from Katharine M. Mullen.
 Maintainer: Nathan Dodder <nathand@sccwrp.org>
 Depends: R (>= 2.14.1)
 Suggests: lattice
 Description: Organic/biological mass spectrometry data analysis.
-License: BSD_2_clause + file LICENSE
+License: BSD_2_clause + file LICENSE 
 URL: http://orgmassspecr.r-forge.r-project.org/
 LazyData: yes
