@@ -1,6 +1,16 @@
 \name{NEWS}
 \title{OrgMassSpecR News}
 
+\section{Changes in version 0.4-2 (2014-03-14)}{
+
+    \itemize{
+
+      \item Vingette changed to R Markdown format and complied using knitr.
+
+    }
+
+}
+
 \section{Changes in version 0.4 (2013-10-04)}{
 
     \itemize{

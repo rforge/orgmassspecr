@@ -3,4 +3,5 @@
 .RData
 orgmassspecr.Rproj
 /OrgMassSpecR.Rcheck
+pkg/OrgMassSpecR.Rcheck
 /README
