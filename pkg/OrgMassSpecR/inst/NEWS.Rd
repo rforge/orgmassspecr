@@ -1,6 +1,16 @@
 \name{NEWS}
 \title{OrgMassSpecR News}
 
+\section{Changes in version 0.4-4 (2014-05-21)}{
+
+    \itemize{
+
+      \item Fixed error in ConvertPeptide. When output = "elements", the resulting element list did not include the additon of water. This caused the mass calculated by, for example, MonoisotopicMass(ConvertPeptide("SEQENCE")) to be incorrect.
+
+    }
+
+}
+
 \section{Changes in version 0.4-2 (2014-03-14)}{
 
     \itemize{

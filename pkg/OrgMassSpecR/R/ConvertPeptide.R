@@ -35,6 +35,8 @@ ConvertPeptide <- function(sequence, output = "elements", IAA = TRUE) {
 		
 		resultsVector <- c(C = 0, H = 0, N = 0, O = 0, S = 0)
 		for(i in 1:length(peptideVector)) { resultsVector <- FindElement(peptideVector[i]) + resultsVector }
+    
+    resultsVector <- resultsVector + c(C = 0, H = 2, N = 0, O = 1, S = 0)   # add water
 		
 		return(as.list(resultsVector))
 	}
